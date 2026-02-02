@@ -80,6 +80,8 @@ timezone: Asia/Hong_Kong # https://en.wikipedia.org/wiki/List_of_tz_database_tim
 
 include:
   - _pages
+  - _includes
+  - _sass
 
 # Exclude from processing.
 # The following items will not be processed, by default. Create a custom list
