@@ -1,0 +1,29 @@
+.thumbGrid {
+    display: grid;
+    overflow: hidden;
+}
+
+.thumbGrid img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 4px;
+}
+
+/* Use a standard class for hiding */
+.thumbGrid-hiddenThumb {
+    display: none !important;
+}
+
+.thumbGrid-moreMark {
+    display: flex;
+    background: #222;
+    color: #fff;
+    align-items: center;
+    justify-content: center;
+    font-family: sans-serif;
+    font-weight: bold;
+    border-radius: 4px;
+    cursor: pointer;
+    order: 999;
+}

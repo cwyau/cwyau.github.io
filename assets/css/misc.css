@@ -1,0 +1,70 @@
+/* Override Minimal Mistakes */
+.sidebar .author__bio {
+  font-size: 0.8em;
+}
+
+.sidebar .author__content {
+  padding-inline: 15px 15px;
+}
+
+/* Right image on header banner */
+.page__hero-right-image {
+  position: absolute;
+  top: 0;
+  right: 20%;
+  height: 100%;
+  width: auto;
+  object-fit: contain;
+  /* Lower z-index to stay behind the text (which has z-index: 2) */
+  z-index: 1;
+  /* Critical: prevents the image from blocking clicks on links/text */
+  pointer-events: none;
+  /* Optional: add a slight transparency so text pops even more */
+  opacity: 0.8;
+}
+
+/* WhatsApp Floating Button */
+.whatsapp-float {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #25d366;
+  color: #FFF !important;
+  border-radius: 50px;
+  padding: 10px 20px;
+  box-shadow: 2px 4px 10px rgba(0,0,0,0.3);
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  text-decoration: none !important;
+  transition: all 0.3s ease;
+
+  &:hover {
+    transform: translateY(-5px);
+    background-color: #128c7e;
+  }
+}
+
+.whatsapp-text {
+  font-size: 14px;
+  line-height: 1.2;
+  margin-right: 12px;
+  text-align: right;
+  font-weight: bold;
+
+}
+
+.whatsapp-icon {
+  font-size: 30px;
+}
+
+/* Hide text on very small phones to keep the UI clean */
+@media (max-width: 480px) {
+  .whatsapp-text {
+    display: none;
+  }
+  .whatsapp-float {
+    padding: 15px;
+    border-radius: 50%;
+  }
+}

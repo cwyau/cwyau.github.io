@@ -1,0 +1,43 @@
+{% comment %}
+  THUMBGRID
+  Author: Raymond Kwok
+  Description: Arrange images into grid.
+
+  Input:
+    @param {string} elementId - [REQUIRED] Element ID of the images' container.
+    @param {object} data - [OPTIONAL] Front matter.
+                           Contains parameters as in the front matter definition.
+
+  =============================================================================
+  FRONT MATTER DEFINITION
+  -----------------------------------------------------------------------------
+  @description
+
+  @param {number} minW - [OPTIONAL] Minimum thumbnail width in px. (default: 90)
+  @param {number} maxW - [OPTIONAL] Maximum thumbnail width in px. (default: 90)
+  @param {number} gap - [OPTIONAL] Gap size between thumbnails in px. (default: 10)
+  @param {number} rowH - [OPTIONAL] Thumbnail height in px. (default: 90)
+  @param {number} maxCols - [OPTIONAL] Maximum number of thumbnails per row. (default: 5)
+  @param {number} maxRows - [OPTIONAL] Maximum number of rows. (default: 1)
+  =============================================================================
+{% endcomment %}
+
+{% assign thumbGrid = include.data %}
+{% assign thumbGrid_id = include.elementId %}
+
+<script>
+  document.getElementById('{{ thumbGrid_id }}').classList.add('thumbGrid');
+  updateThumbGridWrapper = function(){
+    updateThumbGrid(
+      '{{ thumbGrid_id }}',
+      {{ thumbGrid.minW | default: 90}},
+      {{ thumbGrid.maxW | default: 90}},
+      {{ thumbGrid.gap | default: 10}},
+      {{ thumbGrid.rowH | default: 90}},
+      {{ thumbGrid.maxCols | default: 5}},
+      {{ thumbGrid.maxRows | default: 1}},
+    );
+  };
+  window.addEventListener('resize', updateThumbGridWrapper);
+  updateThumbGridWrapper();
+</script>

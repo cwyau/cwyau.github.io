@@ -1,0 +1,8 @@
+.gslide-title {
+  /* Overwrite the default margin by main.scss: 2em */
+  margin-top: 0 !important;
+}
+
+.glightbox-thumbnail {
+  max-width:100px;
+}

@@ -1,0 +1,84 @@
+{% comment %}
+  GLIGHTBOX
+  Author: Raymond Kwok
+  Description: Support GLightBox gallery.
+
+  Input:
+    @param {string} id - Unique ID.
+    @param {object} data - [OPTIONAL] Front matter.
+                           Contains parameters as in the front matter definition.
+
+  =============================================================================
+  FRONT MATTER DEFINITION
+  -----------------------------------------------------------------------------
+  @description
+
+  @param {object} thumbnails - [OPTIONAL]
+    @param {string} name - [REQUIRED] One of {thumbgrid, }.
+                           Its parameters should be appended as sibling.
+    @param {any} [setting] - [OPTIONAL] Parameter applicable to the thumbnails.
+  @param {array} items - [REQUIRED]
+    @param {string} title - [OPTIONAL] Title.
+    @param {string} descr - [OPTIONAL] Description.
+    @param {object} image - [REQUIRED]
+      @param {string} image.url - [REQUIRED] URL to the image.
+      @param {string} image.alt - [OPTIONAL] Accessibility description.
+    @param {object} thumb - [OPTIONAL]
+      @param {string} thumb.url - [OPTIONAL] URL to the thumbnail.
+                                  Use image.url if not provided.
+      @param {string} thumb.alt - [OPTIONAL] Accessibility description.
+                                  Use image.alt if not provided.
+  =============================================================================
+{% endcomment %}
+
+{% if include.id %}
+  {% assign gallery_id = include.id %}
+{% else %}
+  {% assign gallery_id = "none" %}
+{% endif %}
+
+{% if include.data %}
+  {% assign gallery = include.data %}
+{% elsif include.id %}
+  {% assign gallery = page[include.id] %}
+{% else %}
+  {% assign gallery = page.gallery %}
+{% endif %}
+
+{% assign glightbox_id = "glightbox-id-" | append: gallery_id %}
+{% assign thumbGrid_id = "thumbGrid-id-" | append: gallery_id %}
+
+<div id="{{ thumbGrid_id }}">
+  {% for item in gallery.items %}
+    <a href="{{ item.image.url }}"
+       class="{{ glightbox_id }}"
+       data-glightbox="{% if item.title %}title: {{ item.title | escape }};{% endif %}{% if item.descr %}description: {{ item.descr | escape }};{% endif %}{% if item.image.alt %}alt: {{ item.image.alt | escape }};{% endif %}">
+      <img class="glightbox-thumbnail"
+        src="{{ item.thumb.url | default: item.image.url }}"
+        alt="{{ item.thumb.alt | default: item.image.alt | default: '' | escape }}"
+      />
+    </a>
+  {% endfor %}
+</div>
+
+<script type="text/javascript">
+  // Create a registry if not existed
+  window.galleryRegistry = window.galleryRegistry || {};
+
+  // Save the gallery instance for later use
+  window.galleryRegistry['{{ thumbGrid_id }}'] = {
+    'name': 'glightbox',
+    'instance': GLightbox({
+        selector: '.{{ glightbox_id }}',
+        descPosition: 'bottom' // (bottom, top, left, right)
+      }),
+  };
+</script>
+
+{% case gallery.thumbnails.name %}
+  {% when 'thumbgrid' %}
+    {% include thumbgrid elementId=thumbGrid_id data=gallery.thumbnails %}
+  {% else %}
+{% endcase %}
+
+
