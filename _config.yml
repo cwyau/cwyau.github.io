@@ -14,19 +14,21 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 locale: "zh-HK"
-minimal_mistakes_skin: dirt
-title: 邱忠榮 物理治療師
-masthead_title: 邱忠榮 物理治療師 # 首頁
-# subtitle: # smaller text right below masthead_title
+# minimal_mistakes_skin: dirt
+title: 邱忠榮 | 專業物理治療 | 痛症紓解 | 尖沙咀站旁 | 網上復健運動與自我檢查文章及短片
+masthead_title: 邱忠榮 # 首頁
+subtitle: 香港註冊物理治療師
 # logo: "/assets/images/88x88.png" # masthead logo
 email:
-description: >- # this means to ignore newlines until "baseurl:"
-  Write an awesome description for your new site here. You can edit this
-  line in _config.yml. It will appear in your document head meta (for
-  Google search results) and in your feed.xml site description.
+description: "【物理治療師在線】免費學習正確居家復健運動與自我檢查技巧！我們位於尖沙咀站旁，專注透過個人化物理治療方案紓解各類骨骼肌肉痛症。不論是尋找專業物理治療服務，還是自學健康常識，這裡提供科學、易明的教學影片與文章。馬上點擊，開始您的復健之旅！"
 url: "https://cwyau.github.io"
 baseurl: "/"
 # repository: "username/repo-name"
+
+head_scripts:
+  - https://cdn.jsdelivr.net/gh/mcstudios/glightbox/dist/js/glightbox.min.js
+  - /assets/js/thumbgrid.js
+
 teaser: /assets/images/teaser_related.jpeg
 words_per_minute: 250 # typically 250 for english, 300 for chinese
 
@@ -113,7 +115,8 @@ whitelist:
 author:
   name   : "邱忠榮"
   avatar : "/assets/images/bio.png"
-  bio    : "物理治療師"
+  # bio    : "物理治療師"
+  bio: 香港註冊物理治療師<br>香港理工大學物理治療(榮譽)理學士<br>香港理工大學手法治療學碩士<br>香港物理治療學會針灸文憑<br>筋膜手法治療證書<br>龍氏正骨推拿手法認證
   links:
     - label: "YouTube"
       icon: "fab fa-youtube"
@@ -135,23 +138,23 @@ footer:
   links:
     - label: "YouTube"
       icon: "fab fa-youtube"
-      qr_code: "/assets/images/qr_code/qr_youtube.jpg"
+      qr_code: "/assets/images/qr_code/qr_youtube.png"
       url: "https://www.youtube.com/@物理治療師邱忠榮"
     - label: "Instagram"
       icon: "fa-brands fa-instagram"
-      qr_code: "/assets/images/qr_code/qr_instagram.jpg"
+      qr_code: "/assets/images/qr_code/qr_instagram.png"
       url: "https://www.instagram.com/markyauphysiohk/"
     - label: "Threads"
       icon: "fab fa-fw fa-threads"
-      qr_code: "/assets/images/qr_code/qr_threads.jpg"
+      qr_code: "/assets/images/qr_code/qr_threads.png"
       url: "https://www.threads.com/@markyauphysiohk"
     - label: "Facebook"
       icon: "fa-brands fa-facebook"
-      qr_code: "/assets/images/qr_code/qr_facebook.jpg"
+      qr_code: "/assets/images/qr_code/qr_facebook.png"
       url: "https://www.facebook.com/markyauphysiohk/"
     - label: "WhatsApp"
       icon: "fa-brands fa-whatsapp"
-      qr_code: "/assets/images/qr_code/qr_whatsapp.jpg"
+      qr_code: "/assets/images/qr_code/qr_whatsapp.png"
       url: "https://wa.me/85263578708"
   since: "2026"
 

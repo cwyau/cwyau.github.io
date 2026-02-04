@@ -1,9 +1,13 @@
 ---
-title: "按標籤分類"
-search: false
 permalink: /tags/
+search: false
+classes: wide
 layout: tags
-author_profile: true
+title:
+tagline: "健康資訊"
+header:
+  overlay_color: "#333"
+  overlay_image: "/assets/images/banner/banner_model_waist.png"
 sidebar:
   nav: "blog"
 ---

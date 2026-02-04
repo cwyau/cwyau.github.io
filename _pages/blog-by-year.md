@@ -1,9 +1,13 @@
 ---
-title: "按年份分類"
-search: false
 permalink: /posts/
+search: false
+classes: wide
 layout: posts
-author_profile: true
+title:
+tagline: "健康資訊"
+header:
+  overlay_color: "#333"
+  overlay_image: "/assets/images/banner/banner_model_waist.png"
 sidebar:
   nav: "blog"
 ---
