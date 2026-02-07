@@ -3,7 +3,7 @@ permalink: /contact/
 search: false
 header:
   overlay_color: "#333"
-  overlay_image: "/assets/images/banner/banner_contact.jpg"
+  overlay_image: "/assets/images/banner/banner_contact.webp"
   title: "中心地址"
 json_ld_list:
   - json_ld/person_cwyau_base.json

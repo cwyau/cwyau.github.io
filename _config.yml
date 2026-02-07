@@ -51,13 +51,13 @@ lunr:
 # facebook:
 #   app_id:  # A Facebook app ID
 #   publisher:  # A Facebook page URL or ID of the publishing entity
-og_image: /assets/images/bio.png
+og_image: /assets/images/bio.webp
 
 # Include social profile in search results
 social:
   # type:  # Person or Organization (defaults to Person)
   name: "邱忠榮 物理治療師" # If the user or organization name differs from the site's name
-  avatar: "/assets/images/bio.png"
+  avatar: "/assets/images/bio.webp"
   links:
     - "https://www.youtube.com/@物理治療師邱忠榮"
     - "https://www.instagram.com/markyauphysiohk/"
@@ -118,7 +118,7 @@ whitelist:
 
 author:
   name   : "邱忠榮"
-  avatar : "/assets/images/bio.png"
+  avatar : "/assets/images/bio.webp"
   # bio    : "物理治療師"
   bio: 香港註冊物理治療師<br>香港理工大學物理治療(榮譽)理學士<br>香港理工大學手法治療學碩士<br>香港物理治療學會針灸文憑<br>筋膜手法治療證書<br>龍氏正骨推拿手法認證
   links:

@@ -6,7 +6,7 @@ layout: categories
 author_profile: true
 header:
   overlay_color: "#333"
-  overlay_image: "/assets/images/banner/banner_model_waist.png"
+  overlay_image: "/assets/images/banner/banner_model_waist.webp"
   title: "健康資訊"
 json_ld_list:
   - json_ld/person_cwyau_base.json

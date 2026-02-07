@@ -3,7 +3,7 @@ permalink: /about/
 search: false
 header:
   overlay_color: "#333"
-  right_image: "/assets/images/banner/banner_about.png"
+  right_image: "/assets/images/banner/banner_about.webp"
   title: "簡介"
 json_ld_list:
   - json_ld/person_cwyau_base.json

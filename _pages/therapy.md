@@ -4,7 +4,7 @@ search: false
 classes: wide
 header:
   overlay_color: "#333"
-  overlay_image: "/assets/images/banner/banner_consultation.JPG"
+  overlay_image: "/assets/images/banner/banner_consultation.webp"
   title: "物理治療流程"
 json_ld_list:
   - json_ld/person_cwyau_base.json
@@ -15,14 +15,14 @@ gcards:
     descr: 會與你進行一對一會面，詢問清楚你目前的問題及想改善的地方。
     image_position: left
     image:
-      url: /assets/images/therapy_procedure/consultation.jpg
+      url: /assets/images/therapy_procedure/consultation.webp
       alt: 邱忠榮物理治療師正在進行問診
 
   - title: 評估
     descr: 會根據你的情況，進行觸診、動作檢查及臨床測試，得出診斷及治療方案，例如不同身體關節：頸、腰、肩膀、膝蓋、足踝等等…
     image_position: left
     image:
-      url: /assets/images/therapy_procedure/assessment.jpg
+      url: /assets/images/therapy_procedure/assessment.webp
       alt: 邱忠榮物理治療師正在進行評估
     gallery:
       name: glightbox
@@ -31,30 +31,30 @@ gcards:
       items:
         - title: 頸部
           image:
-              url: /assets/images/therapy_procedure/assessment_neck.jpg
+              url: /assets/images/therapy_procedure/assessment_neck.webp
               alt: 物理治療 | 頸部評估
         - title: 肩部
           image:
-              url: /assets/images/therapy_procedure/assessment_shoulder.jpg
+              url: /assets/images/therapy_procedure/assessment_shoulder.webp
               alt: 物理治療 | 肩部評估
         - title: 腰部
           image:
-              url: /assets/images/therapy_procedure/assessment_waist.jpg
+              url: /assets/images/therapy_procedure/assessment_waist.webp
               alt: 物理治療 | 腰部評估
         - title: 膝頭
           image:
-              url: /assets/images/therapy_procedure/assessment_knee.jpg
+              url: /assets/images/therapy_procedure/assessment_knee.webp
               alt: 物理治療 | 膝頭評估
         - title: 腳踝
           image:
-              url: /assets/images/therapy_procedure/assessment_ankle.jpg
+              url: /assets/images/therapy_procedure/assessment_ankle.webp
               alt: 物理治療 | 腳踝評估
 
   - title: 針對性治療
     descr: 會根據你的檢查結果, 作出針對性的治療。
     image_position: left
     image:
-      url: /assets/images/therapy_procedure/treatment.jpg
+      url: /assets/images/therapy_procedure/treatment.webp
       alt: 邱忠榮物理治療師正在進行針對性治療
 ---
 {% include gcards id="gcards" n_cols=1 %}
