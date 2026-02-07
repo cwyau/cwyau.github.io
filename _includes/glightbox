@@ -70,6 +70,7 @@
     'name': 'glightbox',
     'instance': GLightbox({
         selector: '.{{ glightbox_id }}',
+        preload: false, <!-- lazy load -->
         descPosition: 'bottom' <!-- (bottom, top, left, right) -->
       }),
   };
