@@ -29,15 +29,14 @@
     "streetAddress": "河內道5-7號10樓1001室 | Room 1001, 10/F, 5-7 Hanoi Road",
     "addressLocality": "Tsim Sha Tsui",
     "addressRegion": "Kowloon",
-    "addressCountry": "HK",
-    "postalCode": "000000"
+    "addressCountry": "HK"
   },
   "geo": {
     "@type": "GeoCoordinates",
     "latitude": "22.297765",
     "longitude": "114.17422"
   },
-  "hasMap":"https://maps.app.goo.gl/ZvJJ1k1dNm7k1aTj8",
+  "hasMap":"https://www.google.com/maps/place/%E5%9F%B9%E5%BA%B7%E7%89%A9%E7%90%86%E6%B2%BB%E7%99%82/@22.2977285,114.1716611,17z/data=!3m1!4b1!4m6!3m5!1s0x3404019842a707b1:0xbb224acea76f86f0!8m2!3d22.2977236!4d114.1742414!16s%2Fg%2F11sxy7225_?entry=ttu&g_ep=EgoyMDI2MDIwNC4wIKXMDSoKLDEwMDc5MjA2N0gBUAM%3D",
   "telephone": "+852-6357-8708",
   "amenityFeature":[
     {

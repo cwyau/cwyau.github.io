@@ -7,7 +7,7 @@
   "image": {{ site.og_image | absolute_url | jsonify }},
   "hasCredential": {
     "@type": "EducationalOccupationalCredential",
-    "name": "香港註冊物理治療師 | Registered Physiotherapy (HK)",
+    "name": "香港註冊物理治療師 | Registered Physiotherapist (HK)",
     "credentialCategory": "執業執照"
   },
   "memberOf": [

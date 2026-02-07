@@ -10,8 +10,8 @@ header:
 json_ld_list:
   - json_ld/person_cwyau_base.json
   - json_ld/person_cwyau_treatment.json
-title: "物理治療項目 | 手法治療 | 關節鬆動術 | 關節舒整術 | 關筋膜鬆動術 | 乾針炙 | 聚焦式衝擊波 | RF射頻筋膜刀 | 干擾波電療 | 超聲波治療 | 復康運動治療 | 牽引治療 | 冷療壓力治療 | 神經肌肉電刺激治療 | 經皮神經電刺激治療 | 普拉提 | 訂制ICB鞋墊 | 枕頭建議 | Manual Therapy | Mobilization | Manipulation | Myfascial Release | Dry Needling | Shockwave Therapy | Myofascial Release Therapy with Radiofrequency Therapy | Interferential Therapy | Ultrasound Therapy | Rehab Training | Traction Therapy | Cold Compression Therapy | Neuromuscular Electrical Stimulation, NMES | Transcutaneous Electrical Nerve Stimulation, TENS | Pilates"
-description: "邱忠榮物理治療師提供全方位專業治療項目：包括手法治療、乾針炙、聚焦式衝擊波、復康運動訓練等。我們針對頸、腰、膝關節等問題提供針對性方案，並透過超聲波、電療及牽引治療加速組織修復，助您解決痛症，恢復最佳活動能力。我們位於尖沙咀地鐵站旁，歡迎透過電話或 WhatsApp +852 6357 8708 預約諮詢。"
+title: "物理治療項目 | 手法治療 | 關節鬆動術 | 關節舒整術 | 筋膜鬆動術 | 乾針灸 | 聚焦式衝擊波 | RF射頻筋膜刀 | 干擾波電療 | 超聲波治療 | 復康運動治療 | 牽引治療 | 冷療壓力治療 | 神經肌肉電刺激治療 | 經皮神經電刺激治療 | 普拉提 | 訂製ICB鞋墊 | 枕頭建議 | Manual Therapy | Mobilization | Manipulation | Myofascial Release | Dry Needling | Shockwave Therapy | Radiofrequency (RF) Myofascial Release | Interferential Therapy | Ultrasound Therapy | Rehab Training | Traction Therapy | Cold Compression Therapy | Neuromuscular Electrical Stimulation, NMES | Transcutaneous Electrical Nerve Stimulation, TENS | Pilates"
+description: "邱忠榮物理治療師提供專業治療：手法治療、乾針、聚焦式衝擊波及復康運動訓練。針對頸、腰、膝關節問題提供方案，並透過超聲波、電療及牽引治療加速修復，助您恢復活動能力。我們位於尖沙咀地鐵站旁，立即致電或 WhatsApp +852 6357 8708 預約諮詢。"
 gcards:
   - title: "手法治療 - 關節鬆動術 | Manual Therapy - Mobilization"
     descr: 由物理治療師以被動、有節奏的精細手法作用於患者的關節，旨在減輕疼痛及增加關節活動度。
@@ -38,7 +38,7 @@ gcards:
             alt: 物理治療 | 手法治療 | 關節鬆動術 | 膝頭
 
   - title: "手法治療 - 關節舒整術 | Manual Therapy - Manipulation"
-    descr: 由物理治療師以小幅度、高速推力推力，施加到關節之上, 旨在恢復關節活動度和改善關節錯位。
+    descr: 由物理治療師以小幅度、高速推力，施加到關節之上, 旨在恢復關節活動度和改善關節錯位。
     gallery:
       name: glightbox
       thumbnails:
@@ -57,33 +57,33 @@ gcards:
             url: /assets/images/treatment/manual_manipulation_waist.jpg
             alt: 物理治療 | 手法治療 | 關節舒整術 | 腰椎
 
-  - title: "手法治療 - 關筋膜鬆動術 | Manual Therapy - Myfascial Release"
+  - title: "手法治療 - 筋膜鬆動術 | Manual Therapy - Myofascial Release"
     descr: 由物理治療師施利用筋膜刀於受限制的軟組織上施加壓力，如筋膜上的結節或沾黏。
     gallery:
       name: glightbox
       thumbnails:
         name: thumbgrid
       items:
-        - title: 手法治療 - 關筋膜鬆動術 - 肩部
+        - title: 手法治療 - 筋膜鬆動術 - 肩部
           image:
             url: /assets/images/treatment/manual_myfascial_shoulder.jpg
-            alt: 物理治療 | 手法治療 | 關筋膜鬆動術 | 肩部
+            alt: 物理治療 | 手法治療 | 筋膜鬆動術 | 肩部
 
-  - title: "乾針炙 | Dry Needling"
+  - title: "乾針灸 | Dry Needling"
     descr: 是基於解剖學原理將細針直接刺入肌肉激痛點，透過引發局部抽搐反應來精準放鬆深層組織僵硬。
     gallery:
       name: glightbox
       thumbnails:
         name: thumbgrid
       items:
-        - title: 乾針炙 - 腰部
+        - title: 乾針灸 - 腰部
           image:
             url: /assets/images/treatment/dry_needling_waist.jpg
-            alt: 物理治療 | 乾針炙 | 腰部
-        - title: 乾針炙 - 膝頭
+            alt: 物理治療 | 乾針灸 | 腰部
+        - title: 乾針灸 - 膝頭
           image:
             url: /assets/images/treatment/dry_needling_knee.jpg
-            alt: 物理治療 | 乾針炙 | 膝頭
+            alt: 物理治療 | 乾針灸 | 膝頭
 
   - title: "聚焦式衝擊波 | Shockwave Therapy"
     descr: 聚焦式衝擊波利用高能量聲波達到深層肌肉和組織，透過微創刺激與新生血管生長來重啟受損組織的自癒機制。
@@ -97,7 +97,7 @@ gcards:
             url: /assets/images/treatment/shockwave_knee.jpg
             alt: 物理治療 | 聚焦式衝擊波 | 膝頭
 
-  - title: "RF射頻筋膜刀 | Myofascial Release Therapy with Radiofrequency Therapy"
+  - title: "RF射頻筋膜刀 | Radiofrequency (RF) Myofascial Release"
     descr: 利用高頻電磁波能量來緩解痛楚及加速組織修復, 結合筋膜刀鬆解筋肌膜粘連及激痛點。
     gallery:
       name: glightbox
@@ -138,7 +138,7 @@ gcards:
             alt: 物理治療 | 超聲波治療 | 手部
 
   - title: "復康運動治療 | Rehab Training"
-    descr: 聲波產生的深層溫熱與微震作用，能緩解發炎、加速軟組織修復。
+    descr: 透過針對性的功能訓練與動作矯正，強化肌力、改善活動度並恢復身體穩定性，預防傷患再次發生。
     gallery:
       name: glightbox
       thumbnails:
@@ -229,24 +229,24 @@ gcards:
             url: /assets/images/treatment/pilate_2.jpg
             alt: 物理治療 | 普拉提
 
-  - title: "訂制ICB鞋墊 | Custom ICB Orthotics"
+  - title: "訂製ICB鞋墊 | Custom ICB Orthotics"
     descr: 是一種基於澳洲足部生物力學設計的鞋墊。它們由不同密度的 EVA 材料製成，提供足弓和後足支撐，旨在矯正足部異常步態、分散壓力。
     gallery:
       name: glightbox
       thumbnails:
         name: thumbgrid
       items:
-        - title: 訂制ICB鞋墊
+        - title: 訂製ICB鞋墊
           image:
             url: /assets/images/treatment/insole_1.jpg
-            alt: 物理治療 | 訂制ICB鞋墊
-        - title: 訂制ICB鞋墊
+            alt: 物理治療 | 訂製ICB鞋墊
+        - title: 訂製ICB鞋墊
           image:
             url: /assets/images/treatment/insole_2.jpg
-            alt: 物理治療 | 訂制ICB鞋墊
+            alt: 物理治療 | 訂製ICB鞋墊
 
   - title: "枕頭建議 | Pillow Recommendation and Assessment"
-    descr: 物理治療師會量度頸的長度和肩膀的闊, 跟據病人的情況, 建議合適的枕頭。
+    descr: 物理治療師會測量頸部長度與肩膀寬度, 根據病人的情況, 建議合適的枕頭。
     gallery:
       name: glightbox
       thumbnails:

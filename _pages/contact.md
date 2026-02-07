@@ -8,7 +8,7 @@ header:
 json_ld_list:
   - json_ld/person_cwyau_base.json
 title: "中心地址 | 鄰近有電梯的地鐵站出口"
-description: "找尖沙咀物理治療？Rehab Motion 培康物理治療坐落於普基商業中心 10 樓，距離尖沙咀站 N1/N2 出口僅幾步之遙。邱忠榮物理治療師專精於徒手治療及各類痛症康復，協助患者重拾運動能力。歡迎透過電話或 WhatsApp +852 6357 8708 預約諮詢。"
+description: "找尖沙咀物理治療？Rehab Motion 培康物理治療坐落於普基商業中心 10 樓，鄰近尖沙咀站 N1 出口（設升降機）。由邱忠榮物理治療師主理，專精手法治療、跑步受傷及各類痛症康復。立即致電或 WhatsApp +852 6357 8708 預約諮詢。"
 ---
 
 # 培康物理治療 / Rehab Motion
@@ -38,7 +38,7 @@ Rm 1001, 10/F, Podium Plaza,<br>
 
 ## 地鐵 / MTR <img src="https://upload.wikimedia.org/wikipedia/en/b/b9/HK_MTR_logo.svg" width=25px>
 
-尖沙咀站 N1/N2 出口<br>
+尖沙咀站 N1/N2 出口步行 1 分鐘<br>
 (N1 出口設有升降機)<br>
 Tsim Sha Tsui Station Exit N1/N2<br>
 (Elevator available at Exit N1)

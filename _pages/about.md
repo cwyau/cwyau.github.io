@@ -8,11 +8,11 @@ header:
 json_ld_list:
   - json_ld/person_cwyau_base.json
 title: "簡介 | 理大手法治療碩士、針灸及正骨專家 | 痛症紓解"
-description: "邱忠榮物理治療師秉持『手心合一』理念，具備理大手法治療碩士、針灸文憑及龍氏正骨等多項專業資歷，曾任職於理大康復診所，擅長處理骨科痛症及跑步傷患。曾受邀擔任港台《做個健康快活人》嘉賓，憑藉臨床經驗與真誠關懷，助您全方位復原。我們位於尖沙咀地鐵站旁，歡迎透過電話或 WhatsApp +852 6357 8708 預約諮詢。"
+description: "邱忠榮物理治療師秉持『手心合一』理念，具備理大手法治療碩士、針灸文憑及龍氏正骨等多項專業資歷，曾任職於理大康復治療診所，擅長處理骨科痛症及跑步受傷。曾受邀擔任港台《做個健康快活人》嘉賓。我們位於尖沙咀地鐵站旁，立即致電或 WhatsApp +852 6357 8708 預約諮詢。"
 ---
 
 # 邱忠榮先生
-## 理念 – “手心合一”
+## 治療理念 – “手心合一”
 - “手”：代表以手法治療與臨床技術協助患者康復。
 - “心”：象徵對患者的真誠關懷、耐心與同理心。
 
@@ -45,7 +45,7 @@ Mark is committed to evidence-based medicine, integrating personalized treatment
 ## Professional Background
 With experience in the public healthcare system, Mark has worked closely with multidisciplinary medical teams, gaining profound insight into the role and significance of physiotherapy in clinical rehabilitation. After completing advanced academic and clinical training, Mark served as a physiotherapist at the Rehabilitation Clinic of The Hong Kong Polytechnic University. In this role, he was also involved in clinical teaching. Later, Mark joined a private orthopedic specialist medical center, focusing on providing personalized treatment plans for patients. To further enhance his professional skills and knowledge, Mark has pursued advanced training and acquired the following certifications and qualifications:
 
-- Registered Physiotherapy (HK)
+- Registered Physiotherapist (HK)
 - BSc (Hons) in Physiotherapy (PolyU, HK)
 - MSc in Manipulative Physiotherapy (PolyU, HK)
 - Diploma in Acupuncture (HKPA)

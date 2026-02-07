@@ -12,6 +12,6 @@ json_ld_list:
   - json_ld/person_cwyau_base.json
 sidebar:
   nav: "blog"
-title: "健康資訊 | 短文章 | YouTube 影片"
+title: "健康資訊分類 | 物理治療文章與 YouTube 教學影片"
 description: "想學習正確的居家復健與痛症自我檢查？邱忠榮物理治療師提供專業健康資訊文章及由他親自示範的 YouTube 教學影片，涵蓋頸、背、腰、手及腳等各部位的痛症、辦公室伸展及自我檢查技巧。立即瀏覽我們的文章與影片，掌握科學復健知識。我們位於尖沙咀地鐵站旁，歡迎透過電話或 WhatsApp +852 6357 8708 預約諮詢。"
 ---
