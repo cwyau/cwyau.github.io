@@ -31,9 +31,6 @@ head_scripts:
   - https://cdn.jsdelivr.net/gh/mcstudios/glightbox/dist/js/glightbox.min.js
   - /assets/js/thumbgrid.js
 
-footer_scripts:
-  - /assets/js/tilesrow.js
-
 # teaser: /assets/images/teaser_related.jpeg
 words_per_minute: 250 # typically 250 for english, 300 for chinese
 

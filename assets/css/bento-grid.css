@@ -91,21 +91,6 @@
   font-weight: 600;
 }
 
-a.bento-grid-all-articles,
-a.bento-grid-all-articles:hover,
-a.bento-grid-all-articles:visited {
-  font-size: 0.9rem;
-  text-decoration: none;
-  text-align: end;
-  color: red; /* Adjust to your theme */
-  transition: color 0.3s ease;
-}
-
-.bento-grid-all-articles i {
-  margin-left: 5px;
-  font-size: 0.8rem;
-}
-
 .bento-grid-video-wrapper {
   position: relative;
   width: 100%;
