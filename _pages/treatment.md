@@ -230,7 +230,7 @@ gcards:
             alt: 物理治療 | 普拉提
 
   - title: "訂製ICB鞋墊 | Custom ICB Orthotics"
-    descr: 是一種基於澳洲足部生物力學設計的鞋墊。它們由不同密度的 EVA 材料製成，提供足弓和後足支撐，旨在矯正足部異常步態、分散壓力。
+    descr: 是一種基於澳洲足部生物力學設計的鞋墊。採用 ICB Medical 的專利雙密度 (Dual Density) 設計，由不同密度的 EVA 材料製成，提供足弓和後足支撐，旨在矯正足部異常步態、分散壓力。
     gallery:
       name: glightbox
       thumbnails:
