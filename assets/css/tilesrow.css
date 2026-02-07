@@ -43,6 +43,14 @@
   background-color: rgba(0, 0, 0, 0);
 }
 
+/* pointer: coarse - primary input is a finger rather than a high-precision mouse. */
+@media screen and (max-width: 1024px), screen and (pointer: coarse) {
+  .tilesrow-tile.active .tilesrow-tile-overlay {
+    background-color: rgba(0, 0, 0, 0);
+  }
+}
+
+
 @media (max-width: 768px) {
   .tilesrow-tile { flex: 100%; }
 }
