@@ -7,7 +7,7 @@
   position: relative;
   flex: 1;
   height: 100vh;
-  padding: 40px;
+  padding: 40px 0;
   /* display: flex; */
   overflow: hidden;
   background-size: cover;
@@ -23,11 +23,13 @@
 
 .tilesrow-tile-title {
   position: relative;
+  padding: 0 40px;
   z-index: 2; /* Ensures text stays above the overlay */
   width: 100%;
   display: flex;
   font-size: 2rem;
   font-weight: bold;
+  background-color: var(--bg-color);
 }
 
 .tilesrow-tile-overlay {
