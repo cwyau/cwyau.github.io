@@ -12,142 +12,91 @@ layout: default
     <section class="page__content" itemprop="text">
 
       <!-- Cover Banner -->
-      <section class="tilesrow">
-        <div class="tilesrow-tile" style="background-image: url('/assets/images/banner/home.webp');">
-        </div>
+      <section class="grid" style="--vsize:1;--hsize:1">
+        <div class="hero-grid-tile" style="background-image: url('/assets/images/banner/home.webp');"></div>
       </section>
 
       <!-- Connect on WhatsApp -->
-      <section class="tilesrow">
-        <div class="tilesrow-tile homepage-bg-pattern-web" style="height:75vh;">
-          <div style="display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; height: 100%; color: white;">
-            <span class="homepage-message">
+      <section class="grid" style="--vsize:1;--hsize:1">
+        <div class="message-grid-tile homepage-bg-pattern-web" style="color:white;">
+          <div class="content" style="font-size: 2em;">
               一對一骨骼肌肉評估<br>
               結合實證醫學治療<br>
               修復您的疼痛根源
-            </span>
-            <a href="https://wa.me/63578708" class="btn btn--light-outline btn--large" style="margin: 30px;" rel="noopener" target="_blank">
-              WhatsApp 查詢
-            </a>
-            <a class="d-none d-md-flex" href="https://wa.me/63578708" style="min-height: 0; display: flex; align-items: center;" rel="noopener" target="_blank">
-              <img src="/assets/images/qr_code/qr_whatsapp.png" style="max-height: 100%; width: auto; object-fit: contain; max-width:150px"/>
-            </a>
+          </div>
+          <div class="content btn btn--light-outline btn--large" style="font-size:1em;">
+            {% include custom/ext_link url="https://wa.me/63578708" text="WhatsApp 查詢" %}
+          </div>
+          <div class="image" style="max-width:150px;">
+            {% include custom/ext_link url="https://wa.me/63578708" img="/assets/images/qr_code/qr_whatsapp.png" text="WhatsApp 查詢" %}
           </div>
         </div>
       </section>
 
       <!-- Check out latest -->
-      <section class="tilesrow">
-        <div class="tilesrow-tile homepage-bg-pattern-shapes" style="height:50vh;">
-          <div style="display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; height: 100%; color: black;">
-            <span class="homepage-message">
-              最新消息<br>
-              痛症、檢查、運動知識<br>
-              物理治療師解說示範影片
-            </span>
-            <a href="#latest" class="blink-arrow" style="margin: 30px;" aria-label="下滑至最新消息、文章及影片">
-              <div class="blink-arrow-container">
-                <i class="fas fa-chevron-down blink-arrow-delay-1"></i>
-                <i class="fas fa-chevron-down blink-arrow-delay-2"></i>
-                <i class="fas fa-chevron-down blink-arrow-delay-3"></i>
-              </div>
-            </a>
+      <section class="grid" style="--vsize:1;--hsize:1">
+        <div class="message-grid-tile homepage-bg-pattern-shapes" style="color:black;">
+          <div class="content" style="font-size:2em;">
+            最新消息<br>
+            痛症、檢查、運動知識<br>
+            物理治療師解說示範影片
+          </div>
+          <div class="content btn btn--light-outline btn--large" style="color:black;font-size:2em;">
+            {% include custom/ext_link url="#latest" svg="icons/fas_fa-chevron-down.svg" text="WhatsApp 查詢" %}
           </div>
         </div>
       </section>
 
       <!-- News + Latest Articles + Latest YouTube -->
       <section id="latest" class="bento-grid-container homepage-bg-pattern-shapes">
-        <div class="bento-grid">
+        <div class="bento-grid" style="--vsize:3;--hsize:4">
 
-          <!-- News -->
-          <div class="bento-grid-tile bento-grid-vspan" style="--vspan:3;">
-            <span class="bento-grid-tile-label">最新消息</span>
-            <div class="bento-grid-scroll-box">
-              {% if page.news %}
-                {% for item in page.news %}
-                  <div class="bento-grid-item-row">
-                    {% if item.date %}<strong>{{ item.date }}</strong><br>{% endif %}
-                    {{ item.text }}
-                  </div>
-                {% endfor %}
-              {% endif %}
-            </div>
-          </div>
-
-          <!-- Lastest Articles -->
-          <div class="bento-grid-tile bento-grid-hspan" style="--hspan:3;">
-            <div class="bento-grid-post-container">
-              {% for post in site.posts limit:3 %}
-                <div class="bento-grid-post">
-                  <small class="bento-grid-post-date">{{ post.date | date: "%Y年%m月%d日" }}</small>
-                  <h4 class="bento-grid-post-title">
-                    <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
-                  </h4>
-                  <div class="bento-grid-post-excerpt">{{ post.excerpt | strip_html | truncate: 80 }}</div>
+          <div id="latest-news" class="bento-grid-tile" style="--vspan:3;">
+            <div class="title">最新消息</div>
+            <div class="content scroll">
+              {% for item in page.news %}
+                <div class="news-item">
+                  {% if item.date %}<div class="date">{{ item.date }}</div>{% endif %}
+                  {{ item.text }}
                 </div>
               {% endfor %}
             </div>
-            <!-- All Articles Link -->
-            <a href="{{ '/blog' | relative_url }}" class="bento-grid-all-articles">
-              全部文章 <i class="fas fa-arrow-right"></i>
-            </a>
           </div>
 
-          <!-- Latest YouTube -->
-          <div class="bento-grid-tile bento-grid-hspan bento-grid-vspan" style="--vspan:2;--hspan:3;">
-            <div class="bento-grid-video-wrapper">
-              <iframe src="https://www.youtube.com/embed?1istType=playlist&list=UU-XCTx5zZriu7Gu-jb92gIA"></iframe>
+          {% for post in site.posts limit:3 %}
+            <div id="latest-articles" class="bento-grid-tile">
+              <div class="metadata">{{ post.date | date: "%Y年%m月%d日" }}</div>
+              <div class="title"><a href="{{ post.url | relative_url }}">{{ post.title }}</a></div>
+              <div class="content" style="color:#64748b">{{ post.excerpt | strip_html | truncate: 80 }}</div>
+              <div class="footnote" style="font-size: small"><a href="{{ '/blog' | relative_url }}">全部文章 {% include icons/fas_fa-arrow-right.svg %}</a></div>
             </div>
-            <!-- YouTube Channel Link -->
-            <a href="https://www.youtube.com/@物理治療師邱忠榮" class="bento-grid-all-articles" rel="noopener" target="_blank">
-              <i class="fab fa-youtube" aria-hidden="true"></i> YouTube 頻道 <i class="fas fa-arrow-right"></i>
-            </a>
-          </div>
+          {% endfor %}
 
+          <div id="latest-youtube" class="bento-grid-tile" style="--vspan:2;--hspan:3;">
+            <div class="content">
+              {% include custom/youtube_channel channel_id="UU-XCTx5zZriu7Gu-jb92gIA" title="YouTube 頻道最新影片" %}
+            </div>
+            <div class="footnote" style="font-size: small">
+              <a href="https://www.youtube.com/@物理治療師邱忠榮" rel="noopener" target="_blank">
+                <span style="color:red">{% include icons/fab_fa-youtube.svg %}</span> YouTube 頻道 {% include icons/fas_fa-arrow-right.svg %}
+              </a>
+            </div>
+          </div>
         </div>
       </section>
 
-      <!-- Website Menu -->
-      <section class="tilesrow">
-        <div class="tilesrow-tile" style="background-image: url('/assets/images/home/about.webp');">
-          <a class="tilesrow-tile-url" href="/about/" aria-label="簡介"></a>
-          <div class="tilesrow-tile-overlay" style="--bg-color: rgba(32, 32, 32, 0.);"></div>
-          <div class="tilesrow-tile-title" style="color: #ffffff;">
-            簡介
-          </div>
-        </div>
-        <div class="tilesrow-tile" style="background-image: url('/assets/images/home/contact.webp');">
-          <a class="tilesrow-tile-url" href="/contact/" aria-label="中心位置">></a>
-          <div class="tilesrow-tile-overlay" style="--bg-color: rgba(20, 100, 20, 0.9);"></div>
-          <div class="tilesrow-tile-title" style="color: #ffffff;--bg-color: rgba(20, 100, 20, 0.9);">
-            中心位置
-          </div>
-        </div>
-        <div class="tilesrow-tile" style="background-image: url('/assets/images/home/therapy.webp');">
-          <a class="tilesrow-tile-url" href="/therapy/" aria-label="物理治療流程">></a>
-          <div class="tilesrow-tile-overlay" style="--bg-color: rgba(170, 60, 30, 0.9);"></div>
-          <div class="tilesrow-tile-title" style="color: #ffffff;--bg-color: rgba(170, 60, 30, 0.9);">
-            物理治療流程
-          </div>
-        </div>
-        <div class="tilesrow-tile" style="background-image: url('/assets/images/home/treatment.webp');">
-          <a class="tilesrow-tile-url" href="/treatment/" aria-label="物理治療項目">></a>
-          <div class="tilesrow-tile-overlay" style="--bg-color: rgba(30, 80, 130, 0.9);"></div>
-          <div class="tilesrow-tile-title" style="color: #ffffff;--bg-color: rgba(30, 80, 130, 0.9);">
-            物理治療項目
-          </div>
-        </div>
-        <div class="tilesrow-tile" style="background-image: url('/assets/images/home/blog.webp');">
-          <a class="tilesrow-tile-url" href="/blog/" aria-label="健康資訊">></a>
-          <div class="tilesrow-tile-overlay" style="--bg-color: rgba(30, 30, 30, 0.9);"></div>
-          <div class="tilesrow-tile-title" style="color: #ffffff;--bg-color: rgba(30, 30, 30, 0.9);">
-            健康資訊
-          </div>
+      <!-- Menu Mirror -->
+      <section id="menu-mirror" class="grid-container">
+        <div class="grid" style="--vsize:1;--hsize:5">
+          {% include custom/menu name="簡介" url="/about/" bg_image="/assets/images/home/about.webp" color="rgba(32, 32, 32, 0.0)" %}
+          {% include custom/menu name="中心位置" url="/contact/" bg_image="/assets/images/home/contact.webp" color="rgba(20, 100, 20, 0.9)" %}
+          {% include custom/menu name="物理治療流程" url="/therapy/" bg_image="/assets/images/home/therapy.webp" color="rgba(170, 60, 30, 0.9)" %}
+          {% include custom/menu name="物理治療項目" url="/treatment/" bg_image="/assets/images/home/treatment.webp" color="rgba(30, 80, 130, 0.9)" %}
+          {% include custom/menu name="健康資訊" url="/blog/" bg_image="/assets/images/home/blog.webp" color="rgba(30, 30, 30, 0.9)" %}
         </div>
       </section>
+
     </section>
   </article>
 </div>
 
-<script src="/assets/js/tilesrow.js"></script>

@@ -1,0 +1,12 @@
+<a href="{{ include.url }}"
+   rel="noopener"
+   target="_blank"
+   aria-label="{{ include.text | escape }}">
+  {% if include.img %}
+    <img src="{{ include.img | relative_url }}" alt="{{ include.text | escape }}"/>
+  {% elsif include.svg %}
+    {% include {{ include.svg }} %}
+  {% else %}
+    {{ include.text }}
+  {% endif %}
+</a>
