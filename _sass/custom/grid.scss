@@ -1,0 +1,307 @@
+$md-width: 768px; // Define as a Sass variable
+
+:root {
+  --hsize: 4;
+  --vsize: 3;
+  --vspan: 1;
+  --hspan: 1;
+}
+
+.grid_container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+}
+
+.grid {
+  min-height: 100vh;
+  display: grid;
+  grid-template-columns: 1fr;
+  width: 100%;
+}
+
+.grid-tile {
+  display: flex;
+  flex-direction: column;
+}
+
+@media (min-width: $md-width) {
+  .grid {
+      grid-template-rows: repeat(var(--vsize, 3), minmax(0, 1fr));
+      grid-template-columns: repeat(var(--hsize, 4), 1fr);
+  }
+  .grid-tile {
+    grid-row: span var(--vspan, 1);
+    grid-column: span var(--hspan, 1);
+  }
+}
+
+/* Basic structure of a tile
+   _______________
+  |   Image      |
+  |   Title      |
+  |   Subtitle   |
+  |   Content    |
+  |   Foot-note  |
+  |______________|
+
+*/
+
+.grid-tile {
+  .image {
+    display: block;
+  }
+
+ .title {
+    color: black;
+    display: block;
+  }
+
+  .subtitle {
+    color: black;
+    display: block;
+  }
+
+  .metadata {
+    color: black;
+    display: block;
+  }
+
+  .content {
+    flex-grow: 1; /* Gobble up all extra space */
+  }
+
+  .scroll {
+    overflow-y: auto;
+    flex-grow: 1;
+    padding-right: 10px;
+  }
+
+  .scroll::-webkit-scrollbar {
+    width: 4px;
+  }
+
+  .scroll::-webkit-scrollbar-thumb {
+    background: #e2e8f0;
+    border-radius: 10px;
+  }
+
+  .footnote {
+  }
+
+  .overlay-color {
+    position: absolute;
+    z-index: 1;
+    inset: 0;
+    opacity: 0.9;
+    background-color: var(--overlay-color, rgba(0, 0, 0, 0));
+    transition: background-color 0.5s ease;
+  }
+
+  &:hover .overlay-color {
+    background-color: rgba(0, 0, 0, 0);
+  }
+
+  .overlay-link::after {
+    position: absolute;
+    z-index: 3;
+    inset: 0;
+    content: "";
+  }
+}
+
+/*  ----------------------------
+    Extension
+    ---------------------------- */
+
+/* homepage */
+.hero-grid-tile {
+  @extend .grid-tile;
+  background-size: cover;
+  background-position: center;
+}
+
+.message-grid-tile {
+  @extend .grid-tile;
+  min-height: 75vh;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 30px 0;
+
+  .content {
+    flex-grow: 0;
+    font-weight: bold;
+
+    .line {
+      margin: 1em 10px;
+      line-height: 1em;
+      font-size: 2em;
+    }
+
+    .first-line {
+      @extend .line;
+      margin-top: 0;
+    }
+  }
+
+  @media (max-width: $md-width) {
+    .qr_code {
+      display: none;
+    }
+  }
+
+  .btn a,
+  .btn a:hover,
+  .btn a:visited {
+    color: currentColor;
+    text-decoration: none;
+  }
+
+  a,
+  a:focus {
+    outline: none;
+  }
+}
+.bento-grid-container {
+  @extend .grid_container;
+}
+
+.bento-grid {
+  @extend .grid;
+  gap: 20px;
+  min-height: calc(100vh - 2rem - 2rem); /* subtract top bottom padding */
+  max-width: 1400px; /* Set limit to width use in ultra-wide screen */
+}
+
+@media (min-width: $md-width) {
+  .bento-grid-container {
+    padding: 0.5 2rem;
+  }
+  .bento-grid-tile {
+    backdrop-filter: blur(10px);
+  }
+}
+
+.bento-grid-tile {
+  @extend .grid-tile;
+  background: rgba(255, 255, 255, 0.8);
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  padding: 24px;
+  /* backdrop-filter:
+    Blurs whatever behind the tile, giving "Glassmorphism" look
+    Expensive effect for mobile browsers, 4px for mobile, 10px for laptop
+  */
+  backdrop-filter: blur(4px);
+  border-radius: 24px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.03);
+  transition: all 0.3s ease; /* prepare for hover effect */
+}
+
+.bento-grid-tile:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.06);
+  border-color: black;
+}
+
+#latest-news .title {
+  font-weight: 700;
+}
+
+#latest-articles {
+  .title {
+    font-weight: 700;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 1; /* Limit to 1 lines */
+    -webkit-box-orient: vertical;
+  }
+
+  .excerpt {
+    font-size: .8em;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 3; /* Limit to 3 lines */
+    -webkit-box-orient: vertical;
+    flex-grow: 0;
+  }
+
+  .metadata {
+    margin-bottom: 4px;
+    font-size: small;
+    font-weight: 600;
+  }
+}
+
+.menu-grid-tile {
+  @extend .grid-tile;
+  position: relative;
+  padding: 40px 0;
+  font-size: 2rem;
+  font-weight: bold;
+  overflow: hidden;
+  background-size: cover;
+  background-position: center;
+
+  .title {
+    padding: 0 40px;
+    z-index: 2; /* Ensures text stays above the overlay */
+    color: #ffffff;
+    width: 100%;
+    font-size: 2rem;
+    font-weight: 700;
+    background-color: var(--bg-color);
+  }
+}
+
+/* Therapy */
+
+.therapy-grid-tile {
+  @extend .bento-grid-tile;
+  padding: 0px;
+  border-radius: 12px;
+  backdrop-filter: none;
+
+  @media (min-width: $md-width) {
+    &[data-img-pos="left"] {
+      flex-direction: row;
+
+      .image {
+        max-width: 33%;
+        object-fit: scale-down; /* keep aspect-ratio */
+        object-position: top;
+      }
+    }
+  }
+
+  h1 {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+
+  .content {
+    flex-grow: 1;
+    font-size: .75em;
+    margin-top: .83em;
+    margin-bottom: .83em;
+  }
+
+  .image {
+    padding: 12px;
+  }
+
+  .detail {
+    padding: 12px;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .footnote {
+	color: #646769;
+	font-size: 0.6em;
+	text-align: end;
+	text-decoration: none;
+  }
+}

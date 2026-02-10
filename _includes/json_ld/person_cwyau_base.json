@@ -1,0 +1,25 @@
+{
+  "@type": ["Person", "Physiotherapy"],
+  "@id": {{ '/' | absolute_url | append: '#person_physio' | jsonify }},
+  "name": "邱忠榮",
+  "jobTitle": "物理治療師",
+  "url": {{ '/' | absolute_url | jsonify }},
+  "image": {{ site.og_image | absolute_url | jsonify }},
+  "hasCredential": {
+    "@type": "EducationalOccupationalCredential",
+    "name": "香港註冊物理治療師 | Registered Physiotherapist (HK)",
+    "credentialCategory": "執業執照"
+  },
+  "memberOf": [
+    {
+      "@type": "OrganizationRole",
+      "memberOf": {
+        "@type": "Organization",
+        "@id": {{ site.jsonld.org_rehabmotion | jsonify }},
+        "name": "Rehab Motion"
+      },
+      "roleName": "Founder & Owner"
+    }
+  ]{% if site.social.links %},
+  "sameAs": {{ site.social.links | jsonify }}{% endif %}
+}

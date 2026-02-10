@@ -1,0 +1,5 @@
+<div class="menu-grid-tile" style="{% if include.height %}height: {{ include.height }};{% endif %}background-image: url('{{ include.bg_image }}');">
+  <a class="overlay-link" href="{{ include.url | relative_url }}" aria-label="{{ include.name }}"></a>
+  <div class="overlay-color" style="--overlay-color: {{ include.color }};"></div>
+  <div class="title" style="--bg-color: {{ include.color }}">{{ include.name }}</div>
+</div>

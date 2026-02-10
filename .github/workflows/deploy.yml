@@ -1,0 +1,84 @@
+name: Deploy Jekyll with Git History
+on:
+  push:
+    branches: ["master"]
+  workflow_dispatch: # This adds the manual button
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Setup Ruby
+        uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: '3.2'
+          bundler-cache: true
+
+      - name: Build with Jekyll
+        run: bundle exec jekyll build
+
+      # To subset used characters from ttf to make a small woff2
+      # - name: Set up Python
+      #   uses: actions/setup-python@v5
+      #   with:
+      #     python-version: '3.x'
+
+      # - name: Install fonttools
+      #   run: pip install fonttools brotli
+
+      # - name: Auto-Subset Fonts
+      #   run: |
+      #     # 1. Scan the BUILT site (_site) for characters to ensure
+      #     # we catch everything Jekyll generated.
+      #     python3 -c "
+      #     import glob
+      #     chars = set()
+      #     for f in glob.glob('_site/**/*.html', recursive=True):
+      #         with open(f, 'r', encoding='utf-8') as h:
+      #             chars.update(h.read())
+      #     with open('chars.txt', 'w', encoding='utf-8') as f:
+      #         f.write(''.join([c for c in chars if ord(c) > 31]))
+      #     "
+
+      #     # 2. Run subsetting and save directly into the _site folder
+      #     # This ensures the optimized fonts are what actually get deployed.
+      #     # Use your original .ttf files as the source
+
+      #     pyftsubset "assets/fonts/NotoSansTC-Regular.ttf" \
+      #       --text-file="chars.txt" \
+      #       --flavor=woff2 \
+      #       --output-file="_site/assets/fonts/noto-sans-tc-400.woff2"
+
+      #     pyftsubset "assets/fonts/NotoSansTC-Bold.ttf" \
+      #       --text-file="chars.txt" \
+      #       --flavor=woff2 \
+      #       --output-file="_site/assets/fonts/noto-sans-tc-700.woff2"
+
+      #     echo "Subsetting complete. Optimized fonts added to _site."
+      #     ls -lh _site/assets/fonts/
+
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: _site  # Ensure we upload the Jekyll output folder
+
+  deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    needs: build
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
+
+

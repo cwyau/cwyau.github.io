@@ -1,0 +1,76 @@
+{% comment %}
+  GCARDS
+  Author: Raymond Kwok
+  Description: Cards arranged in grid.
+  Input:
+    @param {string} id - Unique ID.
+    @param {number} n_cols - Maximum number of columns to display in the grid.
+                             Actual number determined by screen size.
+    @param {boolean} back_to_top - [OPTIONAL] Add "Back To Top" to each card.
+                                   (default: false)
+
+  =============================================================================
+  FRONT MATTER DEFINITION
+  -----------------------------------------------------------------------------
+  @description
+
+  @param {string} title - [OPTIONAL] Title.
+  @param {string} descr - [OPTIONAL] Description.
+  @param {object} image - [OPTIONAL]
+    @param {string} image.url - [OPTIONAL] URL to the image.
+    @param {string} image.alt - [OPTIONAL] Accessibility description.
+  @param {string} image_position - [OPTIONAL] One of {top (default), left}.
+  @param {object} gallery - [OPTIONAL]
+    @param {string} name - [REQUIRED] One of {glightbox, }.
+                           Its parameters should be appended as sibling.
+    @param {any} [setting] - [OPTIONAL] Parameter applicable to the gallery.
+  =============================================================================
+{% endcomment %}
+
+{% if include.id %}
+  {% assign gcards_id = include.id %}
+  {% assign gcards = page[include.id] %}
+{% else %}
+  {% assign gcards_id = "none" %}
+  {% assign gcards = page.gcards %}
+{% endif %}
+
+<section class="bento-grid-container">
+  <div class="bento-grid" style="--vsize:{{ include.n_cols | default: 1 }};--hsize:1;min-height:0">
+    {% for gcard in gcards %}
+      <div class="therapy-grid-tile"{% if gcard.image_position %} data-img-pos={{ gcard.image_position }}{% endif %}>
+
+        {% if gcard.image and gcard.image.url %}
+          <img class="image" src="{{ gcard.image.url | relative_url }}"
+            {% if gcard.image.alt %}alt="{{ gcard.image.alt | escape_once }}"{% endif %}/>
+        {% endif %}
+
+        <div class="detail">
+
+          {% if gcard.title %}<h1 id="{{ gcard.title | escape_once }}" class="title">{{ gcard.title | escape_once }}</h1>{% endif %}
+
+          {% if gcard.subtitle %}<div class="subtitle">{{ gcard.subtitle | escape_once }}</div>{% endif %}
+
+          {% if gcard.descr %}<div class="content">{{ gcard.descr | escape_once }}</div>{% endif %}
+
+          {% case gcard.gallery.name %}
+            {% when 'glightbox' %}
+              {% assign gallery_id = "gcards-id-" | append: gcards_id | append: "-gallery-id-" | append: forloop.index %}
+              <div class="content">{% include custom/glightbox id=gallery_id data=gcard.gallery %}</div>
+            {% else %}
+          {% endcase %}
+
+          <div class="footnote">
+            {% capture btt_text %}
+              {{ site.data.ui-text[site.locale].back_to_top | default: 'Back to Top' }}<i class="fa-solid fa-arrow-up"></i>
+            {% endcapture %}
+            {%- capture top_url -%}{{ page.url | relative_url }}#top{%- endcapture -%}
+            {% include custom/int_link url=top_url html=btt_text %}
+          </div>
+
+        </div>
+
+      </div>
+    {% endfor %}
+  </div>
+</section>

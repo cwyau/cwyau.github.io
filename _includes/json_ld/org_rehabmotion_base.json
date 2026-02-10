@@ -1,0 +1,7 @@
+{
+  "@type": "Organization",
+  "@id": {{ site.jsonld.org_rehabmotion | jsonify }},
+  "name": "培康物理治療 | Rehab Motion",
+  "url": "https://www.rehabmotion.hk/",
+  "logo": "https://www.rehabmotion.hk/wp-content/uploads/2025/03/rehabmotion-icon-512x512-2.png"
+}

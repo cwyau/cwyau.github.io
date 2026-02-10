@@ -1,0 +1,32 @@
+{
+  "@type": "BreadcrumbList",
+  "@id": {{ page.url | absolute_url | append: '#breadcrumb' | jsonify }},
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "首頁",
+      "item": {{ '/' | absolute_url | jsonify }}
+    }
+    {% assign crumbs = page.url | split: '/' %}
+    {% assign prev_url = site.baseurl | append: '/' %}
+    {% for crumb in crumbs offset: 1 %}
+      {% if forloop.last %}
+        , {
+          "@type": "ListItem",
+          "position": {{ forloop.index | plus: 1 }},
+          "name": {{ page.title | default: crumb | jsonify }},
+          "item": {{ page.url | absolute_url | jsonify }}
+        }
+      {% else %}
+        {% assign prev_url = prev_url | append: crumb | append: '/' %}
+        , {
+          "@type": "ListItem",
+          "position": {{ forloop.index | plus: 1 }},
+          "name": {{ crumb | replace: '-', ' ' | capitalize | jsonify }},
+          "item": {{ prev_url | absolute_url | jsonify }}
+        }
+      {% endif %}
+    {% endfor %}
+  ]
+}

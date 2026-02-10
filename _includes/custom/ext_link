@@ -1,0 +1,13 @@
+<a href="{{ include.url | absolute_url }}"
+   rel="noopener"
+   target="_blank"
+   aria-label="{{ include.text }}"
+   {{ include.attr | escape}}>
+  {% if include.html %}
+    {{ include.html }}
+  {% elsif include.img %}
+    <img src="{{ include.img | relative_url }}" alt="{{ include.text }}"/>
+  {% else %}
+    {{ include.text }}
+  {% endif %}
+</a>

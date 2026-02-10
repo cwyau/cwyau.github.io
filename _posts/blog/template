@@ -1,0 +1,94 @@
+---
+title: "(註: 要改)臀痛? 伸延到腳? 麻痺，行路辛苦? 可能有以下病症..."
+categories:
+  - (註: 要改/加, 跟住個格式, 一行行加或者減)
+  - 梨狀肌綜合症
+tags:
+  - (註: 要改/加, 跟住個格式, 一行行加或者減)
+  - 梨狀肌綜合症
+  - 臀部
+  - 臀痛
+  - 自我檢查
+---
+
+(註: 個FILE 名要改做 年年年年-月月-日日-題目題目題目.md)
+(註: 睇上面, title, categories, tags 都要改)
+
+# 第一級標題 (註: 一個#號, 用 # 號的標題才會出現在頁面右邊的目錄)
+梨狀肌綜合症主要特徵... (註: 第一段十分重要, 要概括整篇文章, SEO 用)
+
+# 第一級標題
+文字文字文字
+{註: 兩段文字之間要留一空行, 否則會自動駁返埋做一段}
+文字文字文字
+
+
+- 第一級Bullet point list item (註: 一個-號)
+- 第一級Bullet point list item
+  - 第二級Bullet point list item (註: -號前每加兩個空格, 提升一級)
+
+1. 第一級Numbered list item (註: 一個數字加.號)
+2. 第一級Numbered list item
+  - 第二級Bullet point list item
+
+## 第二級標題 (兩個#號)
+*文字* (註: 斜體)
+**文字** (註: 粗體)
+***文字*** (註: 斜+粗體)
+
+(註: 以下一行即為插入一條用字做的LINK )
+{* include custom/ext_link url="{網址放呢度}" text="{條LINK D 字放呢度}" %}
+
+(註: 以下一行即為插入YOUTUBE, 要改id, 改title )
+{% include custom/youtube_video id="{id 放響度}" title="{title 放響度} | YouTube 影片" %}
+
+(註: 以下兩行即為藍色文字小框, 第一行是框內的字, 第二行是必需要有)
+10-15分鐘，每天2-3次。
+{: .notice--info}
+
+(註: 講多次, 個FILE 名要改做 年年年年-月月-日日-題目題目題目.md)
+
+---------例子----------
+
+# 梨狀肌綜合症
+梨狀肌綜合症主要特徵包括...
+(註: 隔一行開新段)
+腰痛中大約佔0.6-6%，通常...
+
+# 成因
+梨狀肌綜合症可以分為兩類：
+
+- **原發性**：涉及解剖...
+- **繼發性**：通常由創...
+
+# 10秒簡單自我檢查
+
+患者需雙腳併攏，膝蓋...
+
+{% include custom/youtube_video id="u1kBZeCI4zE" title="10秒簡單自我檢查 | YouTube 影片" %}
+
+# 物理治療運動有助復康
+
+## 家居熱療法
+在伸展之前使用熱敷...
+
+10-15分鐘，每天2-3次。
+{: .notice--info}
+
+## 4字伸展：放鬆梨狀肌
+
+{% include custom/youtube_video id="dbfBQPY-BfQ" title="4字伸展：放鬆梨狀肌 | YouTube 影片" %}
+
+## 強化臀部肌肉，減輕梨狀肌的負荷
+
+保持20秒，20次一組，每日3-4組。
+{: .notice--info}
+
+{% include custom/youtube_video id="EgfL0gvZE-Q" title="強化臀部肌肉，減輕梨狀肌的負荷 | YouTube 影片" %}
+
+## 強化臀中肌運動
+
+保持20秒，20次一組，每日3-4組。
+{: .notice--info}
+
+{% include custom/youtube_video id="AlNIVAmkyzA" title="強化臀中肌運動 | YouTube 影片" %}

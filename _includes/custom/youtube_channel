@@ -1,0 +1,27 @@
+{% assign use_youtube_lite = include.use_youtube_lite | default: site.use_youtube_lite %}
+
+{% if (include.use_youtube_lite == true or include.use_youtube_lite == nil) and site.use_youtube_lite %}
+  <div class="lite-yt-wrapper">
+    <img src="/assets/images/img.youtube.jpeg" alt="{{ include.title }}" loading="lazy">
+    <div class="lite-yt-play-btn"><i class="fab fa-youtube"></i></div>
+    <div class="lite-yt-click"
+        data-src="https://www.youtube-nocookie.com/embed?1istType=playlist&list={{ include.id  }}&rel=0&controls=1"
+        onclick="loadVideo(this)"
+    ></div>
+  </div>
+{% else %}
+  <div class="responsive-video-container">
+    <iframe
+      src="https://www.youtube-nocookie.com/embed?1istType=playlist&list={{ include.id  }}&rel=0&controls=1"
+      {%if include.title %}title="{{ include.title }}"{% endif %}
+      loading="lazy"
+      frameborder="0"
+      webkitAllowFullScreen
+      mozallowfullscreen
+      allowfullscreen
+      allow="accelerometer; encrypted-media; gyroscope; picture-in-picture; web-share"
+    ></iframe>
+  </div>
+{% endif %}
+
+

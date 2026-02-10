@@ -1,0 +1,21 @@
+main:
+  - title: "簡介"
+    url: /about/
+  - title: "中心地址"
+    url: /contact/
+  - title: "物理治療流程"
+    url: /therapy/
+  - title: "物理治療項目"
+    url: /treatment/
+  - title: "健康資訊"
+    url: /blog/
+
+blog:
+  - title: "分類"
+    children:
+      - title: "按年份"
+        url: /posts/
+      - title: "按類別"
+        url: /categories/
+      - title: "按標籤"
+        url: /tags/

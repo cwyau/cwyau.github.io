@@ -1,0 +1,224 @@
+# Welcome to Jekyll!
+#
+# This config file is meant for settings that affect your whole blog, values
+# which you are expected to set up once and rarely edit after that. If you find
+# yourself editing this file very often, consider using Jekyll's data files
+# feature for the data you need to update frequently.
+#
+# For technical reasons, this file is *NOT* reloaded automatically when you use
+# 'bundle exec jekyll serve'. If you change this file, please restart the server process.
+
+# Site settings
+# These are used to personalize your new site. If you look in the HTML files,
+# you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
+# You can create any custom variable you would like, and they will be accessible
+# in the templates via {{ site.myvariable }}.
+locale: "zh-TW"
+# minimal_mistakes_skin: dirt
+copyright: 邱忠榮物理治療師
+title: "邱忠榮物理治療師 | 尖沙咀地鐵站旁 | 理大手法治療碩士、針灸及正骨 | 培康物理治療 | Rehab Motion | 網上健康資訊文章及短片 | WhatsApp 網上預約諮詢 | YouTube | Instagram | Facebook | Threads | 手術後物理治療 | 關節炎 | 肌骼痛症 | 健康 | 健康 | 腰酸背痛 | 手腳麻痹 | 拗柴 | 創傷 | 栢金遜症 | 腦神經復康 | 骨科 | 養生 | 關節錯位 | 神經復康 | 創傷 | 從根源著手 | 術後復康 | 居家運動 | 關節扭傷 | 運動創傷 | 關節痛"
+title_separator: "-"
+masthead_title: 邱忠榮 # 首頁
+subtitle: 香港註冊物理治療師
+# logo: "/assets/images/88x88.png" # masthead logo
+email:
+description: "【物理治療師在線】免費學習正確居家復健運動與自我檢查技巧！我們位於尖沙咀站旁，專注透過個人化物理治療方案紓解各類骨骼肌肉痛症。不論是尋找專業物理治療服務，還是自學健康常識，這裡提供科學、易明的教學影片與文章。歡迎致電或 WhatsApp +852 6357 8708 預約諮詢，邁向健康生活。"
+url: "https://cwyau.github.io"
+baseurl: "/"
+repository: "cwyau/cwyau.github.io"
+
+# head_scripts:
+#   - 
+
+# teaser: /assets/images/teaser_related.jpeg
+words_per_minute: 250 # typically 250 for english, 300 for chinese
+
+# # Disable Feed Icons
+# atom_feed:
+#   hide: true
+
+# Search settings
+search: true # site-wide search
+lunr:
+  search_within_pages: true
+
+# SEO
+# google_site_verification: "yourVerificationCode"
+# bing_site_verification: "0FC3FD70512616B052E755A56F8952D"
+# baidu_site_verification: "code-iA0wScWXN1"
+
+# facebook:
+#   app_id:  # A Facebook app ID
+#   publisher:  # A Facebook page URL or ID of the publishing entity
+og_image: /assets/images/bio.webp
+
+# Include social profile in search results
+social:
+  # type:  # Person or Organization (defaults to Person)
+  name: "邱忠榮 物理治療師" # If the user or organization name differs from the site's name
+  avatar: "/assets/images/bio.webp"
+  links:
+    - "https://www.youtube.com/@物理治療師邱忠榮"
+    - "https://www.instagram.com/markyauphysiohk/"
+    - "https://www.threads.com/@markyauphysiohk"
+    - "https://www.facebook.com/markyauphysiohk/"
+    - "https://wa.me/85263578708"
+
+# analytics:
+#   provider: "google-gtag"
+#   google:
+#     tracking_id: "UA-1234567-8"
+#     anonymize_ip: false # default
+
+# Build settings
+markdown: kramdown
+
+# To be consistent with GemFile. Use theme instead of remote_theme
+# remote_theme: mmistakes/minimal-mistakes
+theme: minimal-mistakes-jekyll
+
+# Outputting
+permalink: /:categories/:title/
+paginate: 10 # amount of posts to show
+paginate_path: /page:num/
+timezone: Asia/Hong_Kong # https://en.wikipedia.org/wiki/List_of_tz_database_time_zones
+
+include:
+  - _pages
+
+# Exclude from processing.
+# The following items will not be processed, by default. Create a custom list
+# to override the default setting.
+# exclude:
+#   - Gemfile
+#   - Gemfile.lock
+#   - node_modules
+#   - vendor/bundle/
+#   - vendor/cache/
+#   - vendor/gems/
+#   - vendor/ruby/
+
+# Plugins (previously gems:)
+plugins:
+  - jekyll-paginate
+  - jekyll-sitemap
+  - jekyll-gist
+  - jekyll-feed
+  - jemoji
+  - jekyll-include-cache
+
+whitelist:
+  - jekyll-paginate
+  - jekyll-sitemap
+  - jekyll-gist
+  - jekyll-feed
+  - jemoji
+  - jekyll-include-cache
+
+author:
+  name   : "邱忠榮"
+  avatar : "/assets/images/bio.webp"
+  # bio    : "物理治療師"
+  bio: 香港註冊物理治療師<br>香港理工大學物理治療(榮譽)理學士<br>香港理工大學手法治療學碩士<br>香港物理治療學會針灸文憑
+  links:
+    - label: "YouTube"
+      icon: "fab fa-youtube"
+      url: "https://www.youtube.com/@物理治療師邱忠榮"
+    - label: "Instagram"
+      icon: "fa-brands fa-instagram"
+      url: "https://www.instagram.com/markyauphysiohk/"
+    - label: "Threads"
+      icon: "fab fa-fw fa-threads"
+      url: "https://www.threads.com/@markyauphysiohk"
+    - label: "Facebook"
+      icon: "fa-brands fa-facebook"
+      url: "https://www.facebook.com/markyauphysiohk/"
+    - label: "WhatsApp"
+      icon: "fa-brands fa-whatsapp"
+      url: "https://wa.me/85263578708"
+
+footer:
+  links:
+    - label: "YouTube"
+      icon: "fab fa-youtube"
+      qr_code: "/assets/images/qr_code/qr_youtube.webp"
+      url: "https://www.youtube.com/@物理治療師邱忠榮"
+    - label: "Instagram"
+      icon: "fa-brands fa-instagram"
+      qr_code: "/assets/images/qr_code/qr_instagram.webp"
+      url: "https://www.instagram.com/markyauphysiohk/"
+    - label: "Threads"
+      icon: "fab fa-fw fa-threads"
+      qr_code: "/assets/images/qr_code/qr_threads.webp"
+      url: "https://www.threads.com/@markyauphysiohk"
+    - label: "Facebook"
+      icon: "fa-brands fa-facebook"
+      qr_code: "/assets/images/qr_code/qr_facebook.webp"
+      url: "https://www.facebook.com/markyauphysiohk/"
+    - label: "WhatsApp"
+      icon: "fa-brands fa-whatsapp"
+      qr_code: "/assets/images/qr_code/qr_whatsapp.webp"
+      url: "https://wa.me/85263578708"
+  since: "2026"
+
+defaults:
+  # _posts
+  - scope:
+      path: ""
+      type: posts
+    values:
+      permalink: /blog/:title/
+      layout: single
+      author_profile: true
+      read_time: true
+      comments: false
+      share: true
+      related: true
+      show_date: true
+      invite_feedback: |
+        如你對文章內容有任何疑問或建議，歡迎與我聯絡：
+        <a href="https://wa.me/85263578708" aria-label="WhatsApp"><i class="fab fa-whatsapp" aria-label="WhatsApp"></i></a>
+        {: .notice--success}
+      toc: true
+      toc_sticky: true
+      header:
+        overlay_color: "#333"
+        overlay_image: "/assets/images/banner/banner_model_waist.webp"
+        overlay_image_alt: "健康資訊文章"
+        show_overlay_excerpt: false
+      sidebar:
+        nav: "blog"
+      json_ld_list:
+        - json_ld/posts.json
+  # _pages
+  - scope:
+      path: "_pages"
+      type: pages
+    values:
+      layout: single
+      author_profile: true
+
+paginate_path: /blog/page:num/
+paginate: 5
+
+category_archive:
+  type: liquid
+  path: /categories/
+tag_archive:
+  type: liquid
+  path: /tags/
+
+jsonld:
+  org_rehabmotion: "https://www.rehabmotion.hk/#organization"
+
+sass:
+  style: compressed
+  quiet_deps: true # silent warnings
+
+compress_html:
+  clippings: all
+  comments: ["<!--", "-->"]
+  end_of_line: false
+  profile: false # set to true to see report in terminal
+
+use_youtube_lite: true

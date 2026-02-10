@@ -1,0 +1,22 @@
+{
+  "@type": "FAQPage",
+  "@id": {{ page.url | absolute_url | append: '#faq' | jsonify }},
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "第一次物理治療需要準備什麼？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "請帶備過往的 X 光或 MRI 報告，並穿著寬鬆舒適的運動服以便進行檢查。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "治療過程會痛嗎？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "治療師會根據你的耐受度調整力道，部分治療（如衝擊波）可能會有輕微痠脹感，屬正常反應。"
+      }
+    }
+  ]
+}

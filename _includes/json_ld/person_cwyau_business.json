@@ -1,0 +1,87 @@
+{
+  "@context": "https://schema.org",
+  "@type": ["Person", "Physiotherapy"],
+  "@id": {{ '/' | absolute_url | append: '#person_physio' | jsonify }},
+  "priceRange":"$$",
+  "areaServed":[
+    {
+       "@type":"Country",
+       "name":"HK"
+    }
+  ],
+  "openingHoursSpecification":[
+    {
+       "@type":"OpeningHoursSpecification",
+       "dayOfWeek":[
+          "Monday",
+          "Tuesday",
+          "Wednesday",
+          "Thursday",
+          "Friday",
+          "Saturday"
+       ],
+       "opens":"10:00",
+       "closes":"20:00"
+    }
+  ],
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "河內道5-7號10樓1001室 | Room 1001, 10/F, 5-7 Hanoi Road",
+    "addressLocality": "Tsim Sha Tsui",
+    "addressRegion": "Kowloon",
+    "addressCountry": "HK"
+  },
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": "22.297765",
+    "longitude": "114.17422"
+  },
+  "hasMap":"https://www.google.com/maps/place/%E5%9F%B9%E5%BA%B7%E7%89%A9%E7%90%86%E6%B2%BB%E7%99%82/@22.2977285,114.1716611,17z/data=!3m1!4b1!4m6!3m5!1s0x3404019842a707b1:0xbb224acea76f86f0!8m2!3d22.2977236!4d114.1742414!16s%2Fg%2F11sxy7225_?entry=ttu&g_ep=EgoyMDI2MDIwNC4wIKXMDSoKLDEwMDc5MjA2N0gBUAM%3D",
+  "telephone": "+852-6357-8708",
+  "amenityFeature":[
+    {
+       "@type":"LocationFeatureSpecification",
+       "name":"無障礙設施 | Wheelchair Accessible",
+       "value":"true"
+    },
+    {
+       "@type":"LocationFeatureSpecification",
+       "name":"電梯直達 | Elevator Access",
+       "value":"true"
+    }
+  ],
+  "potentialAction":[
+    {
+       "@type":"ReserveAction",
+       "name":"立即預約",
+       "target":{
+          "@type":"EntryPoint",
+          "urlTemplate":"https://wa.me/85263578708",
+          "actionPlatform":[
+             "DesktopWebPlatform",
+             "MobileWebPlatform"
+          ]
+       },
+       "result":{
+          "@type":"Reservation",
+          "name":"立即預約 (WhatsApp)"
+       }
+    },
+    {
+       "@type":"CommunicateAction",
+       "name":"歡迎查詢",
+       "target":{
+          "@type":"EntryPoint",
+          "urlTemplate":"https://wa.me/85263578708",
+          "actionPlatform":[
+             "DesktopWebPlatform",
+             "MobileWebPlatform"
+          ]
+       },
+       "result":{
+          "@type":"Message",
+          "name":"歡迎查詢 (WhatsApp)"
+       }
+    }
+  ]
+}

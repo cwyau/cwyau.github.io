@@ -1,0 +1,107 @@
+---
+layout: default
+---
+
+<div id="main" role="main">
+  <article class="splash" itemscope itemtype="https://schema.org/CreativeWork"{% if page.locale %} lang="{{ page.locale }}"{% endif %}>
+    {% if page.title %}<meta itemprop="headline" content="{{ page.title | markdownify | strip_html | strip_newlines | escape_once }}">{% endif %}
+    {% if page.excerpt %}<meta itemprop="description" content="{{ page.excerpt | markdownify | strip_html | strip_newlines | escape_once }}">{% endif %}
+    {% if page.date %}<meta itemprop="datePublished" content="{{ page.date | date_to_xmlschema }}">{% endif %}
+    {% if page.last_modified_at %}<meta itemprop="dateModified" content="{{ page.last_modified_at | date_to_xmlschema }}">{% endif %}
+
+    <section class="page__content" itemprop="text">
+
+      <!-- Cover Banner -->
+      <section class="grid" style="--vsize:1;--hsize:1">
+        <div class="hero-grid-tile" style="background-image: url('/assets/images/banner/home.webp');"></div>
+      </section>
+
+      <!-- Connect on WhatsApp -->
+      <section class="grid" style="--vsize:1;--hsize:1">
+        <div class="message-grid-tile homepage-bg-pattern-web" style="color:white;">
+          <div class="content">
+            <div class='first-line'>一對一骨骼肌肉評估</div>
+            <div class='line'>結合實證醫學治療</div>
+            <div class='line'>修復您的疼痛根源</div>
+            <div class="line btn btn--light-outline btn--large" style="font-size:1em;">
+              {% include custom/ext_link url="https://wa.me/63578708" text="WhatsApp 查詢" %}
+            </div>
+          </div>
+          <div class="image qr_code" style="max-width:150px;">
+            {% include custom/ext_link url="https://wa.me/63578708" img="/assets/images/qr_code/qr_whatsapp.webp" text="WhatsApp 查詢" %}
+          </div>
+        </div>
+      </section>
+
+      <!-- Check out latest -->
+      <section class="grid" style="--vsize:1;--hsize:1">
+        <div class="message-grid-tile homepage-bg-pattern-shapes" style="color:black;">
+          <div class="content">
+            <div class="line">最新消息</div>
+            <div class="line">痛症、檢查、運動知識</div>
+            <div class="line">物理治療師解說示範影片</div>
+            <div class="line btn btn--light-outline btn--large" style="color:black;font-size:2em;">
+              {% include custom/ext_link url="#latest" html="<i class=\"fas fa-chevron-down\"></i>" text="前往最新消息、文章和短片" %}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- News + Latest Articles + Latest YouTube -->
+      <section id="latest" class="bento-grid-container homepage-bg-pattern-shapes">
+        <div class="bento-grid" style="--vsize:3;--hsize:4">
+
+          <div id="latest-news" class="bento-grid-tile" style="--vspan:3;">
+            <div class="title">最新消息</div>
+            <div class="content scroll">
+              {% for item in page.news %}
+                <div class="news-item">
+                  {% if item.date %}<div class="date">{{ item.date }}</div>{% endif %}
+                  {{ item.text }}
+                </div>
+              {% endfor %}
+            </div>
+          </div>
+
+          {% for post in site.posts limit:3 %}
+            <div id="latest-articles" class="bento-grid-tile">
+              <div class="metadata">{{ post.date | date: "%Y年%m月%d日" }}</div>
+              <div class="title">
+                {% assign url = post.url | relative_url %}
+                {% include custom/int_link url=url text=post.title %}
+              </div>
+              <div class="content">
+                <div class="excerpt" style="color:#64748b">{{ post.excerpt | strip_html | truncate: 80 }}</div>
+              </div>
+              <div class="footnote" style="font-size: small">
+                {% include custom/int_link url="/blog" html="全部文章<i class=\"fa-solid fa-arrow-right\"></i>" text="前往全部文章" %}
+              </div>
+            </div>
+          {% endfor %}
+
+          <div id="latest-youtube" class="bento-grid-tile" style="--vspan:2;--hspan:3;">
+            <div class="content">
+              {% include custom/youtube_channel id="UU-XCTx5zZriu7Gu-jb92gIA" title="YouTube 頻道最新影片" use_youtube_lite=false %}
+            </div>
+            <div class="footnote" style="font-size: small">
+              {% include custom/ext_link url="https://www.youtube.com/@物理治療師邱忠榮" html="YouTube 頻道<i class=\"fa-solid fa-arrow-right\"></i>" text="前往物理治療師邱忠榮YouTube 頻道" %}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Menu Mirror -->
+      <section id="menu-mirror" class="grid-container">
+        <div class="grid" style="--vsize:1;--hsize:5">
+          {% include custom/menu height="100vh" name="簡介" url="/about/" bg_image="/assets/images/home/about.webp" color="rgba(32, 32, 32, 0.0)" %}
+          {% include custom/menu name="中心位置" url="/contact/" bg_image="/assets/images/home/contact.webp" color="rgba(20, 100, 20, 0.9)" %}
+          {% include custom/menu name="物理治療流程" url="/therapy/" bg_image="/assets/images/home/therapy.webp" color="rgba(170, 60, 30, 0.9)" %}
+          {% include custom/menu name="物理治療項目" url="/treatment/" bg_image="/assets/images/home/treatment.webp" color="rgba(30, 80, 130, 0.9)" %}
+          {% include custom/menu name="健康資訊" url="/blog/" bg_image="/assets/images/home/blog.webp" color="rgba(30, 30, 30, 0.9)" %}
+        </div>
+      </section>
+
+    </section>
+  </article>
+</div>
+

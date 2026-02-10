@@ -1,0 +1,49 @@
+{% unless site.atom_feed.hide %}
+  {% assign show_atom = true %}
+{% endunless %}
+{% if site.footer.links or show_atom %}
+<div class="page__footer-follow">
+  <!-- row-cols-1: stack vertically on mobile -->
+  <!-- row-cols-md-auto: align horizontally on medium screens and up -->
+  <!-- <ul class="social-icons row row-cols-1 row-cols-md-auto g-3 list-unstyled align-items-center"> -->
+  <ul class="social-icons social-links-container">
+    {% if site.data.ui-text[site.locale].follow_label %}
+      <li class="social-item">
+        <strong>{{ site.data.ui-text[site.locale].follow_label}}</strong>
+      </li>
+    {% endif %}
+
+    {% if site.footer.links %}
+      {% for link in site.footer.links %}
+        {% if link.label and link.url %}
+          <li class="social-item">
+            <a href="{{ link.url }}" rel="noopener" target="_blank">
+              <i class="{{ link.icon | default: 'fas fa-link' }}" aria-hidden="true"></i>
+              <span>{{ link.label | escape_once | strip }}</span>
+
+              {% if link.qr_code %}
+                <div class="qr-code-wrapper">
+                  <img src="{{ link.qr_code }}" alt="QR Code for {{ link.label }}">
+                </div>
+              {% endif %}
+            </a>
+          </li>
+        {% endif %}
+      {% endfor %}
+    {% endif %}
+  
+    {% unless site.atom_feed.hide %}
+      <li class="social-item">
+        <a href="{{ site.atom_feed.path | default: '/feed.xml' | relative_url }}" rel="noopener" target="_blank">
+          <i class="fas fa-fw fa-rss-square" aria-hidden="true"></i>
+          {{ site.data.ui-text[site.locale].feed_label | default: "Feed" }}
+        </a>
+      </li>
+    {% endunless %}
+  </ul>
+
+</div>
+
+{% endif %}
+
+<div class="page__footer-copyright">&copy; {% assign site_time = site.time | date: '%Y' %}{% if site.footer.since and site_time != site.footer.since %}{{ site.footer.since }} - {% endif %}{{ site_time }} <a href="{{ site.copyright_url | default: site.url }}">{{ site.copyright | default: site.title | escape_once | strip }}</a>.<br>{{ site.data.ui-text[site.locale].powered_by | default: "Powered by" }} <a href="https://jekyllrb.com" rel="noopener nofollow" target="_blank">Jekyll</a> &amp; <a href="https://mademistakes.com/work/jekyll-themes/minimal-mistakes/" rel="nofollow noopener" target="_blank">Minimal Mistakes</a>.</div>

@@ -1,0 +1,1 @@
+<script src="{{ include.src }}"{% if include.defer != false %} defer{% endif %}></script>

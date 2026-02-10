@@ -1,0 +1,11 @@
+<a href="{{ include.url | absolute_url }}"
+   aria-label="{{ include.text }}"
+   {{ include.attr_html }}>
+  {% if include.html %}
+    {{ include.html }}
+  {% elsif include.img %}
+    <img src="{{ include.img | relative_url }}" alt="{{ include.text }}"/>
+  {% else %}
+    {{ include.text }}
+  {% endif %}
+</a>

@@ -1,0 +1,10 @@
+{
+  "@type": "WebPage",
+  "@id": {{ page.url | absolute_url | append: '#webpage' | jsonify }},
+  "url": {{ page.url | absolute_url | jsonify }},
+  "name": {{ page.title | default: site.title | jsonify }},
+  "description": {{ page.excerpt | default: page.description | default: site.description | strip_html | strip_newlines | jsonify }},
+  "isPartOf": { "@id": {{ '/' | absolute_url | append: '#website' | jsonify }} },
+  "inLanguage": {{ site.locale | default: zh-HK | jsonify }},
+  "breadcrumb": { "@id": {{ page.url | absolute_url | append: '#breadcrumb' | jsonify }} }
+}

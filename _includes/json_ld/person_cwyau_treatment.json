@@ -1,0 +1,93 @@
+{
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "@id": {{ '/' | absolute_url | append: '#service' | jsonify }},
+  "serviceType": "物理治療與康復服務 | Physiotherapy and Rehabilitation Services",
+  "provider": { "@id": {{ '/' | absolute_url | append: '#person_physio' | jsonify }} },
+  "hasOfferCatalog": {
+    "@type": "OfferCatalog",
+    "name": "治療 | Treatments",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "item": { "@type": "Service", "name": "手法治療 | Manual Therapy" }
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "item": { "@type": "Service", "name": "關節鬆動術 | Mobilization" }
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "item": { "@type": "Service", "name": "關節舒整術 | Manipulation" }
+      },
+      {
+        "@type": "ListItem",
+        "position": 4,
+        "item": { "@type": "Service", "name": "筋膜鬆動術 | Myofascial Release" }
+      },
+      {
+        "@type": "ListItem",
+        "position": 5,
+        "item": { "@type": "Service", "name": "乾針灸 | Dry Needling" }
+      },
+      {
+        "@type": "ListItem",
+        "position": 6,
+        "item": { "@type": "Service", "name": "聚焦式衝擊波 | Shockwave Therapy" }
+      },
+      {
+        "@type": "ListItem",
+        "position": 7,
+        "item": { "@type": "Service", "name": "RF射頻筋膜刀 | Radiofrequency (RF) Myofascial Release" }
+      },
+      {
+        "@type": "ListItem",
+        "position": 8,
+        "item": { "@type": "Service", "name": "干擾波電療 | Interferential Therapy" }
+      },
+      {
+        "@type": "ListItem",
+        "position": 9,
+        "item": { "@type": "Service", "name": "超聲波治療 | Ultrasound Therapy" }
+      },
+      {
+        "@type": "ListItem",
+        "position": 10,
+        "item": { "@type": "Service", "name": "牽引治療 | Traction Therapy" }
+      },
+      {
+        "@type": "ListItem",
+        "position": 11,
+        "item": { "@type": "Service", "name": "冷療壓力治療 | Cold Compression Therapy" }
+      },
+      {
+        "@type": "ListItem",
+        "position": 12,
+        "item": { "@type": "Service", "name": "神經肌肉電刺激治療 | Neuromuscular Electrical Stimulation (NMES)" }
+      },
+      {
+        "@type": "ListItem",
+        "position": 13,
+        "item": { "@type": "Service", "name": "經皮神經電刺激治療 | Transcutaneous Electrical Nerve Stimulation (TENS)" }
+      },
+      {
+        "@type": "ListItem",
+        "position": 14,
+        "item": { "@type": "Service", "name": "普拉提 | Pilates" }
+      },
+      {
+        "@type": "ListItem",
+        "position": 15,
+        "item": { "@type": "Service", "name": "訂製 ICB 鞋墊 | Custom ICB Orthotics" }
+      },
+      {
+        "@type": "ListItem",
+        "position": 16,
+        "item": { "@type": "Service", "name": "枕頭建議與評估 | Pillow Recommendation and Assessment" }
+      }
+    ]
+  }
+}

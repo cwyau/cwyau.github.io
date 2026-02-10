@@ -1,0 +1,19 @@
+{
+  "@type": "BlogPosting",
+  "@id": {{ page.url | absolute_url | append: '#article' | jsonify }},
+  "isPartOf": { "@id": {{ '/' | absolute_url | append: '#website' | jsonify }} },
+  "author": { "@id": {{ '/' | absolute_url | append: '#person_physio' | jsonify }} },
+  "headline": {{ page.title | jsonify }},
+  "datePublished": {{ page.date | date_to_xmlschema | jsonify }},
+  {% if page.last_modified_at %}
+  "dateModified": {{ page.last_modified_at | date_to_xmlschema | jsonify }},
+  {% endif %}
+  "mainEntityOfPage": { "@id": {{ page.url | absolute_url | append: '#webpage' | jsonify }} },
+  "wordCount": {{ page.content | number_of_words | jsonify }},
+  "description": {{ page.excerpt | strip_html | strip_newlines | truncate: 160 | jsonify }},
+  {% comment %}
+    "image": {{ page.header.overlay_image | default: site.og_image | absolute_url | jsonify }},
+  {% endcomment %}
+  "publisher": { "@id": {{ '/' | absolute_url | append: '#person_physio' | jsonify }} },
+  "inLanguage": {{ page.lang | default: site.locale | default: "zh-HK" | jsonify }}
+}

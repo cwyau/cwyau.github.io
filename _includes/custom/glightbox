@@ -1,0 +1,71 @@
+{% comment %}
+  GLIGHTBOX
+  Author: Raymond Kwok
+  Description: Support GLightBox gallery.
+
+  Input:
+    @param {string} id - Unique ID.
+    @param {object} data - [OPTIONAL] Front matter.
+                           Contains parameters as in the front matter definition.
+
+  =============================================================================
+  FRONT MATTER DEFINITION
+  -----------------------------------------------------------------------------
+  @description
+
+  @param {object} thumbnails - [OPTIONAL]
+    @param {number} tWidth - [OPTIONAL] Thumbnail width in px. (default: 90)
+    @param {number} tHeight - [OPTIONAL] Thumbnail height in px. (default: 90)
+    @param {number} gap - [OPTIONAL] Gap size between thumbnails in px. (default: 10)
+    @param {number} maxCols - [OPTIONAL] Maximum number of thumbnails per row. (default: 5)
+    @param {number} maxRows - [OPTIONAL] Maximum number of rows. (default: 1)
+  @param {array} items - [REQUIRED]
+    @param {string} title - [OPTIONAL] Title.
+    @param {string} descr - [OPTIONAL] Description.
+    @param {object} image - [REQUIRED]
+      @param {string} image.url - [REQUIRED] URL to the image.
+      @param {string} image.alt - [OPTIONAL] Accessibility description.
+    @param {object} thumb - [OPTIONAL]
+      @param {string} thumb.url - [OPTIONAL] URL to the thumbnail.
+                                  Use image.url if not provided.
+      @param {string} thumb.alt - [OPTIONAL] Accessibility description.
+                                  Use image.alt if not provided.
+  =============================================================================
+{% endcomment %}
+
+{% if include.id %}
+  {% assign gallery_id = include.id %}
+{% else %}
+  {% assign gallery_id = "none" %}
+{% endif %}
+
+{% if include.data %}
+  {% assign gallery = include.data %}
+{% elsif include.id %}
+  {% assign gallery = page[include.id] %}
+{% else %}
+  {% assign gallery = page.gallery %}
+{% endif %}
+
+{% assign gallery_id = "gallery-id-" | append: gallery_id %}
+
+<div id="{{ gallery_id }}" class="thumbGrid"
+  data-tWidth="{{ gallery.thumbnails.tWidth }}"
+  data-tHeight="{{ gallery.thumbnails.tHeight }}"
+  data-gap="{{ gallery.thumbnails.gap }}"
+  data-maxCols="{{ gallery.thumbnails.maxCols }}"
+  data-maxRows="{{ gallery.thumbnails.maxRows }}"
+>
+  {% for item in gallery.items %}
+    {% capture full_attr -%}
+      class="{{ gallery_id }}"
+      data-glightbox="
+        {%- if item.title %}title: {{ item.title | escape }};{% endif -%}
+        {%- if item.descr %}description: {{ item.descr | escape }};{% endif -%}
+        {%- if item.image.alt %}alt: {{ item.image.alt | escape }};{% endif -%}"
+    {%- endcapture %}
+    {% assign img_url = item.thumb.url | default: item.image.url %}
+    {% assign img_alt = {{ item.thumb.alt | default: item.image.alt | escape }} %}
+    {% include custom/int_link url=item.image.url attr_html=full_attr img=img_url text=img_alt %}
+  {% endfor %}
+</div>
