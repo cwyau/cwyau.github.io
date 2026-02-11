@@ -34,22 +34,32 @@ gcards:
           image:
               url: /assets/images/therapy_procedure/assessment_neck.webp
               alt: 物理治療 | 頸部評估
+          thumb:
+              url: /assets/images/therapy_procedure/assessment_neck-0090.webp
         - title: 肩部
           image:
               url: /assets/images/therapy_procedure/assessment_shoulder.webp
               alt: 物理治療 | 肩部評估
+          thumb:
+              url: /assets/images/therapy_procedure/assessment_shoulder-0090.webp
         - title: 腰部
           image:
               url: /assets/images/therapy_procedure/assessment_waist.webp
               alt: 物理治療 | 腰部評估
+          thumb:
+              url: /assets/images/therapy_procedure/assessment_waist-0090.webp
         - title: 膝頭
           image:
               url: /assets/images/therapy_procedure/assessment_knee.webp
               alt: 物理治療 | 膝頭評估
+          thumb:
+              url: /assets/images/therapy_procedure/assessment_knee-0090.webp
         - title: 腳踝
           image:
               url: /assets/images/therapy_procedure/assessment_ankle.webp
               alt: 物理治療 | 腳踝評估
+          thumb:
+              url: /assets/images/therapy_procedure/assessment_ankle-0090.webp
 
   - title: 針對性治療
     descr: 會根據你的檢查結果, 作出針對性的治療。

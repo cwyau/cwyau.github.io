@@ -26,18 +26,26 @@ gcards:
           image:
             url: /assets/images/treatment/manual_mobilization_neck.webp
             alt: 物理治療 | 手法治療 | 關節鬆動術 | 頸部
+          thumb:
+            url: /assets/images/treatment/manual_mobilization_neck-0090.webp
         - title: 手法治療 - 關節鬆動術 - 肩部
           image:
             url: /assets/images/treatment/manual_mobilization_shoulder.webp
             alt: 物理治療 | 手法治療 | 關節鬆動術 | 肩部
+          thumb:
+            url: /assets/images/treatment/manual_mobilization_shoulder-0090.webp
         - title: 手法治療 - 關節鬆動術 - 腰部
           image:
             url: /assets/images/treatment/manual_mobilization_waist.webp
             alt: 物理治療 | 手法治療 | 關節鬆動術 | 腰部
+          thumb:
+            url: /assets/images/treatment/manual_mobilization_waist-0090.webp
         - title: 手法治療 - 關節鬆動術 - 膝頭
           image:
             url: /assets/images/treatment/manual_mobilization_knee.webp
             alt: 物理治療 | 手法治療 | 關節鬆動術 | 膝頭
+          thumb:
+            url: /assets/images/treatment/manual_mobilization_knee-0090.webp
 
   - title: "手法治療 - 關節舒整術"
     subtitle: "Manual Therapy - Manipulation"
@@ -51,14 +59,20 @@ gcards:
           image:
             url: /assets/images/treatment/manual_manipulation_neck.webp
             alt: 物理治療 | 手法治療 | 關節舒整術 | 頸椎
+          thumb:
+            url: /assets/images/treatment/manual_manipulation_neck-0090.webp
         - title: 手法治療 - 關節舒整術 - 胸椎
           image:
             url: /assets/images/treatment/manual_manipulation_chest.webp
             alt: 物理治療 | 手法治療 | 關節舒整術 | 胸椎
+          thumb:
+            url: /assets/images/treatment/manual_manipulation_chest-0090.webp
         - title: 手法治療 - 關節舒整術 - 腰椎
           image:
             url: /assets/images/treatment/manual_manipulation_waist.webp
             alt: 物理治療 | 手法治療 | 關節舒整術 | 腰椎
+          thumb:
+            url: /assets/images/treatment/manual_manipulation_waist-0090.webp
 
   - title: "手法治療 - 筋膜鬆動術"
     subtitle: "Manual Therapy - Myofascial Release"
@@ -72,6 +86,8 @@ gcards:
           image:
             url: /assets/images/treatment/manual_myfascial_shoulder.webp
             alt: 物理治療 | 手法治療 | 筋膜鬆動術 | 肩部
+          thumb:
+            url: /assets/images/treatment/manual_myfascial_shoulder-0090.webp
 
   - title: "乾針灸"
     subtitle: "Dry Needling"
@@ -85,10 +101,14 @@ gcards:
           image:
             url: /assets/images/treatment/dry_needling_waist.webp
             alt: 物理治療 | 乾針灸 | 腰部
+          thumb:
+            url: /assets/images/treatment/dry_needling_waist-0090.webp
         - title: 乾針灸 - 膝頭
           image:
             url: /assets/images/treatment/dry_needling_knee.webp
             alt: 物理治療 | 乾針灸 | 膝頭
+          thumb:
+            url: /assets/images/treatment/dry_needling_knee-0090.webp
 
   - title: "聚焦式衝擊波"
     subtitle: "Shockwave Therapy"
@@ -102,6 +122,8 @@ gcards:
           image:
             url: /assets/images/treatment/shockwave_knee.webp
             alt: 物理治療 | 聚焦式衝擊波 | 膝頭
+          thumb:
+            url: /assets/images/treatment/shockwave_knee-0090.webp
 
   - title: "RF射頻筋膜刀"
     subtitle: "Radiofrequency (RF) Myofascial Release"
@@ -115,10 +137,14 @@ gcards:
           image:
             url: /assets/images/treatment/rf_knee.webp
             alt: 物理治療 | RF射頻筋膜刀 | 膝頭
+          thumb:
+            url: /assets/images/treatment/rf_knee-0090.webp
         - title: RF射頻筋膜刀 - 肩部
           image:
             url: /assets/images/treatment/rf_shoulder.webp
             alt: 物理治療 | RF射頻筋膜刀 | 肩部
+          thumb:
+            url: /assets/images/treatment/rf_shoulder-0090.webp
 
   - title: "干擾波電療"
     subtitle: "Interferential Therapy"
@@ -132,6 +158,8 @@ gcards:
           image:
             url: /assets/images/treatment/interferential_arm.webp
             alt: 物理治療 | 干擾波電療 | 手臂
+          thumb:
+            url: /assets/images/treatment/interferential_arm-0090.webp
 
   - title: "超聲波治療"
     subtitle: "Ultrasound Therapy"
@@ -145,6 +173,8 @@ gcards:
           image:
             url: /assets/images/treatment/ultrasound_hand.webp
             alt: 物理治療 | 超聲波治療 | 手部
+          thumb:
+            url: /assets/images/treatment/ultrasound_hand-0090.webp
 
   - title: "復康運動治療"
     subtitle: "Rehab Training"
@@ -158,18 +188,26 @@ gcards:
           image:
             url: /assets/images/treatment/rehab_1.webp
             alt: 物理治療 | 復康運動治療
+          thumb:
+            url: /assets/images/treatment/rehab_1-0090.webp
         - title: 復康運動治療 - 深蹲
           image:
             url: /assets/images/treatment/rehab_squat.webp
             alt: 物理治療 | 復康運動治療
+          thumb:
+            url: /assets/images/treatment/rehab_squat-0090.webp
         - title: 復康運動治療 - 深蹲
           image:
             url: /assets/images/treatment/rehab_3.webp
             alt: 物理治療 | 復康運動治療
+          thumb:
+            url: /assets/images/treatment/rehab_3-0090.webp
         - title: 復康運動治療
           image:
             url: /assets/images/treatment/rehab_4.webp
             alt: 物理治療 | 復康運動治療
+          thumb:
+            url: /assets/images/treatment/rehab_4-0090.webp
 
   - title: "牽引治療"
     subtitle: "Traction Therapy"
@@ -183,6 +221,8 @@ gcards:
           image:
             url: /assets/images/treatment/traction_neck.webp
             alt: 物理治療 | 牽引治療 | 頸部
+          thumb:
+            url: /assets/images/treatment/traction_neck-0090.webp
 
   - title: "冷療壓力治療"
     subtitle: "Cold Compression Therapy"
@@ -196,6 +236,8 @@ gcards:
           image:
             url: /assets/images/treatment/cold_knee.webp
             alt: 物理治療 | 冷療壓力治療 | 膝頭
+          thumb:
+            url: /assets/images/treatment/cold_knee-0090.webp
 
   - title: "神經肌肉電刺激治療"
     subtitle: "Neuromuscular Electrical Stimulation, NMES"
@@ -209,10 +251,14 @@ gcards:
           image:
             url: /assets/images/treatment/neuromuscular_shoulder.webp
             alt: 物理治療 | 神經肌肉電刺激治療 | 肩部
+          thumb:
+            url: /assets/images/treatment/neuromuscular_shoulder-0090.webp
         - title: 神經肌肉電刺激治療 - 膝頭
           image:
             url: /assets/images/treatment/neuromuscular_knee.webp
             alt: 物理治療 | 神經肌肉電刺激治療 | 膝頭
+          thumb:
+            url: /assets/images/treatment/neuromuscular_knee-0090.webp
 
   - title: "經皮神經電刺激治療"
     subtitle: "Transcutaneous Electrical Nerve Stimulation, TENS"
@@ -226,6 +272,8 @@ gcards:
           image:
             url: /assets/images/treatment/transcutaneous_shoulder.webp
             alt: 物理治療 | 經皮神經電刺激治療 | 肩部
+          thumb:
+            url: /assets/images/treatment/transcutaneous_shoulder-0090.webp
 
   - title: "普拉提"
     subtitle: "Pilates"
@@ -239,10 +287,14 @@ gcards:
           image:
             url: /assets/images/treatment/pilate_1.webp
             alt: 物理治療 | 普拉提
+          thumb:
+            url: /assets/images/treatment/pilate_1-0090.webp
         - title: 普拉提
           image:
             url: /assets/images/treatment/pilate_2.webp
             alt: 物理治療 | 普拉提
+          thumb:
+            url: /assets/images/treatment/pilate_2-0090.webp
 
   - title: "訂製ICB鞋墊"
     subtitle: "Custom ICB Orthotics"
@@ -256,10 +308,14 @@ gcards:
           image:
             url: /assets/images/treatment/insole_1.webp
             alt: 物理治療 | 訂製ICB鞋墊
+          thumb:
+            url: /assets/images/treatment/insole_1-0090.webp
         - title: 訂製ICB鞋墊
           image:
             url: /assets/images/treatment/insole_2.webp
             alt: 物理治療 | 訂製ICB鞋墊
+          thumb:
+            url: /assets/images/treatment/insole_2-0090.webp
 
   - title: "枕頭建議"
     subtitle: "Pillow Recommendation and Assessment"
@@ -273,9 +329,13 @@ gcards:
           image:
             url: /assets/images/treatment/pillow_1.webp
             alt: 物理治療 | 枕頭建議
+          thumb:
+            url: /assets/images/treatment/pillow_1-0090.webp
         - title: 枕頭建議
           image:
             url: /assets/images/treatment/pillow_2.webp
             alt: 物理治療 | 枕頭建議
+          thumb:
+            url: /assets/images/treatment/pillow_2-0090.webp
 ---
 {% include custom/gcards id="gcards" n_cols=1 %}
