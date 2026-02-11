@@ -4,7 +4,8 @@ search: false
 classes: wide
 header:
   overlay_color: "#333"
-  overlay_image: "/assets/images/banner/banner_consultation.webp"
+  overlay_image: "/assets/images/banner/banner_consultation-2048.webp"
+  overlay_image_md: "/assets/images/banner/banner_consultation-1024.webp"
   overlay_image_alt: "物理治療流程"
   title: "物理治療流程"
 json_ld_list:

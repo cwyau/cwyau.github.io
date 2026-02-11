@@ -1,4 +1,4 @@
-$md-width: 768px; // Define as a Sass variable
+$md-width: 768px;
 
 :root {
   --hsize: 4;
@@ -118,9 +118,11 @@ $md-width: 768px; // Define as a Sass variable
 /* homepage */
 .hero-grid-tile {
   @extend .grid-tile;
+  @extend .responsive-bg-src;
   background-size: cover;
   background-position: center;
 }
+
 
 .message-grid-tile {
   @extend .grid-tile;
@@ -236,6 +238,7 @@ $md-width: 768px; // Define as a Sass variable
 
 .menu-grid-tile {
   @extend .grid-tile;
+  @extend .responsive-bg-src;
   position: relative;
   padding: 40px 0;
   font-size: 2rem;

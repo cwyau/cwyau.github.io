@@ -5,7 +5,8 @@ toc: true
 toc_sticky: true
 header:
   overlay_color: "#333"
-  overlay_image: "/assets/images/banner/banner_machine.webp"
+  overlay_image: "/assets/images/banner/banner_machine-2048.webp"
+  overlay_image_md: "/assets/images/banner/banner_machine-1024.webp"
   overlay_image_alt: "物理治療項目"
   title: "物理治療項目"
 json_ld_list:

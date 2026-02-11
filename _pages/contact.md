@@ -3,7 +3,8 @@ permalink: /contact/
 search: false
 header:
   overlay_color: "#333"
-  overlay_image: "/assets/images/banner/banner_contact.webp"
+  overlay_image: "/assets/images/banner/banner_contact-2048.webp"
+  overlay_image_md: "/assets/images/banner/banner_contact-1024.webp"
   overlay_image_alt: "中心地址"
   title: "中心地址"
 json_ld_list:

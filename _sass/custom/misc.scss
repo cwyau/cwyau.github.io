@@ -1,4 +1,14 @@
-$md-width: 768px; // Define as a Sass variable
+$md-width: 768px;
+
+.responsive-bg-src {
+  --bg-src: var(--bg-src-lg);
+
+  /* Tablet (Intermediate size) */
+  @media (max-width: $md-width) {
+      --bg-src: var(--bg-src-md, var(--bg-src-lg));
+  }
+
+}
 
 /* Override Minimal Mistakes */
 .sidebar .author__bio {
@@ -10,6 +20,10 @@ $md-width: 768px; // Define as a Sass variable
 
 .nav__items li ul li {
   margin: 8px 0;
+}
+
+.page__hero--overlay {
+  @extend .responsive-bg-src;
 }
 
 /* Override glightbox */

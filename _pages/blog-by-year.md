@@ -7,7 +7,8 @@ author_profile: true
 title: "健康資訊"
 header:
   overlay_color: "#333"
-  overlay_image: "/assets/images/banner/banner_model_waist.webp"
+  overlay_image: "/assets/images/banner/banner_model_waist-1024.webp"
+  overlay_image_md: "/assets/images/banner/banner_model_waist-1024.webp"
   overlay_image_alt: "健康資訊"
   title: "健康資訊"
 json_ld_list:

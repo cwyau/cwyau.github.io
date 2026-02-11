@@ -13,9 +13,9 @@ layout: default
 
       <!-- Cover Banner -->
       <section class="grid" style="--vsize:1;--hsize:1">
-        <div class="hero-grid-tile" style="background-image: url('/assets/images/banner/home.webp');"></div>
+        <div class="hero-grid-tile" style="
+          {% include custom/responsive_image_style bg_src="/assets/images/banner/home-2048.webp" bg_src_md="/assets/images/banner/home-1024.webp" %}"></div>
       </section>
-
       <!-- Connect on WhatsApp -->
       <section class="grid" style="--vsize:1;--hsize:1">
         <div class="message-grid-tile homepage-bg-pattern-web" style="color:white;">
@@ -94,10 +94,10 @@ layout: default
       <section id="menu-mirror" class="grid-container">
         <div class="grid" style="--vsize:1;--hsize:5">
           {% include custom/menu height="100vh" name="簡介" url="/about/" bg_image="/assets/images/home/about.webp" color="rgba(32, 32, 32, 0.0)" %}
-          {% include custom/menu name="中心位置" url="/contact/" bg_image="/assets/images/home/contact.webp" color="rgba(20, 100, 20, 0.9)" %}
-          {% include custom/menu name="物理治療流程" url="/therapy/" bg_image="/assets/images/home/therapy.webp" color="rgba(170, 60, 30, 0.9)" %}
-          {% include custom/menu name="物理治療項目" url="/treatment/" bg_image="/assets/images/home/treatment.webp" color="rgba(30, 80, 130, 0.9)" %}
-          {% include custom/menu name="健康資訊" url="/blog/" bg_image="/assets/images/home/blog.webp" color="rgba(30, 30, 30, 0.9)" %}
+          {% include custom/menu name="中心位置" url="/contact/" bg_image="/assets/images/home/contact.webp" bg_image_md="/assets/images/home/contact-0512.webp" color="rgba(20, 100, 20, 0.9)" %}
+          {% include custom/menu name="物理治療流程" url="/therapy/" bg_image="/assets/images/home/therapy.webp" bg_image_md="/assets/images/home/therapy-0512.webp" color="rgba(170, 60, 30, 0.9)" %}
+          {% include custom/menu name="物理治療項目" url="/treatment/" bg_image="/assets/images/home/treatment.webp" bg_image_md="/assets/images/home/treatment-0512.webp" color="rgba(30, 80, 130, 0.9)" %}
+          {% include custom/menu name="健康資訊" url="/blog/" bg_image="/assets/images/home/blog.webp" bg_image_md="/assets/images/home/blog-0512.webp" color="rgba(30, 30, 30, 0.9)" %}
         </div>
       </section>
 

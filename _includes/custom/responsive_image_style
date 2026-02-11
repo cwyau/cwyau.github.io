@@ -1,0 +1,3 @@
+background-image: var(--bg-src);
+--bg-src-lg: url('{{ include.bg_src }}');
+{% if include.bg_src_md %}--bg-src-md: url('{{ include.bg_src_md }}');{% endif %}
