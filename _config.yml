@@ -23,9 +23,9 @@ subtitle: 香港註冊物理治療師
 # logo: "/assets/images/88x88.png" # masthead logo
 email:
 description: "【物理治療師在線】免費學習正確居家復健運動與自我檢查技巧！我們位於尖沙咀站旁，專注透過個人化物理治療方案紓解各類骨骼肌肉痛症。不論是尋找專業物理治療服務，還是自學健康常識，這裡提供科學、易明的教學影片與文章。歡迎致電或 WhatsApp +852 6357 8708 預約諮詢，邁向健康生活。"
-url: "https://cwyau.hk"
+url: "https://www.cwyau.hk"
 baseurl: "/"
-repository: "cwyau/cwyau.github.io"
+# repository: "cwyau/cwyau.github.io"
 
 # head_scripts:
 #   - 

@@ -1,4 +1,4 @@
-<a href="{{ include.url | absolute_url }}"
+<a href="{{ include.url | relative_link }}"
    aria-label="{{ include.text }}"
    {{ include.attr_html }}>
   {% if include.html %}
