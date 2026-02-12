@@ -7,11 +7,11 @@ ASSET_FOLDER = 'assets'
 HOST = r'''(?P<HOST>(?:cwyau.hk|www.cwyau.hk|localhost:4000|))'''
 PATH = rf'''(?P<PATH>{ASSET_FOLDER}\/[^"\']+)'''
 EXT = (
-    r'(?P<EXTN>'
+    r'(?P<EXT>(?i:'
     r'7z|avi|avif|apk|bin|bmp|bz2|class|css|csv|doc|docx|dmg|ejs|eot|eps|exe|'
     r'flac|gif|gz|ico|iso|jar|jpg|jpeg|js|mid|midi|mkv|mp3|mp4|ogg|otf|pdf|'
     r'pict|pls|png|ppt|pptx|ps|rar|svg|svgz|swf|tar|tif|tiff|ttf|webm|webp|'
-    r'woff|woff2|xls|xlsx|zip|zst)'
+    r'woff|woff2|xls|xlsx|zip|zst))'
 )
 
 # "http://localhost:4000/assets/images/bio.webp?h=9ae2b76"
